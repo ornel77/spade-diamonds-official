@@ -14,7 +14,7 @@ function Hero() {
         
     // </section>
     <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
-    <Carousel>
+    <Carousel pauseOnHover>
       <img src="/sd6.jpeg" alt="..." />
       <img src="/sd5.jpeg" alt="..." />
       <img src="/sd7.jpeg" alt="..." />
