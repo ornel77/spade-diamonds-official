@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+@import '../variables';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: $background-color;
+  color: $white;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  display: inline-block;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               UTILITY CLASSES                              */
+/* -------------------------------------------------------------------------- */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px;
+  width: 100%;
+}
+
+.btn {
+  color: white;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.test-container {
+  background-color:$purple;
+  border-radius: 50px;
+  min-height: 80vh;
+  margin-top: 60px;
+  display: grid;
+  place-items: center;
+  
+}
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                MEDIA QUERIES                               */
+/* -------------------------------------------------------------------------- */
+@media screen and (max-width: 900px) {
+  .container {
+    max-width: 700px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    max-width: 340px;
+  }
+
+  .test-container {
+    max-width: 300px;
+  }
+}
