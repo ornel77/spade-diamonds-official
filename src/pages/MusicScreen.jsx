@@ -3,9 +3,9 @@ import Musics from '../components/Musics/Musics'
 
 const MusicScreen = () => {
   return (
-    <div>
+    <>
       <Musics />
-    </div>
+    </>
   )
 }
 
