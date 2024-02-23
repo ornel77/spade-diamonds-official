@@ -31,7 +31,7 @@ export const musics = [
     id:uuid(),
     title: "Wrong",
     artist: "Spade Diamnonds",
-    songSrc: "/LaVida.wav",
+    songSrc: "/begining.wav",
   },
   {
     id:uuid(),
@@ -43,12 +43,12 @@ export const musics = [
     id:uuid(),
     title: "Modest Moment",
     artist: "Spade Diamnonds",
-    songSrc: "/loveLetters.wav",
+    songSrc: "/begining.wav",
   },
   {
     id:uuid(),
     title: "Despite",
     artist: "Spade Diamnonds",
-    songSrc: "/theHalfKilled.wav",
+    songSrc: "/begining.wav",
   },
 ];

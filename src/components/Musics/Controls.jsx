@@ -2,7 +2,7 @@ import React from 'react'
 
 const Controls = () => {
   return (
-    <div>Controls</div>
+    <div className="controls"></div>
   )
 }
 

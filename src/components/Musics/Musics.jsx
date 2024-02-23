@@ -5,11 +5,13 @@ import HeaderPlayer from './HeaderPlayer'
 import Actions from './Actions'
 import Playlist from './Playlist'
 import Controls from './Controls'
+import PlayerState from '../../context/PlayerState'
 
 
 const Musics = () => {
   return (
-    <div className="audioplayer">
+    <PlayerState>
+      <div className="audioplayer">
         <div className="container">
             <HeaderPlayer />
             <Actions />
@@ -17,6 +19,8 @@ const Musics = () => {
         </div>
         <Controls />
     </div>
+    </PlayerState>
+    
   )
 }
 
