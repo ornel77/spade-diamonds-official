@@ -27,9 +27,9 @@ const PlayerState = ( props) => {
   // Prev song
   const prevSong = () => {
     if(state.currentSong === 0) {
-      SetCurrent(state.songslist.length - 1)
+      SetCurrent(state.songslist.length - 1) // go to the last
     } else {
-      SetCurrent(state.currentSong - 1)
+      SetCurrent(state.currentSong - 1) // go to previous song
     }
   }
 
@@ -42,6 +42,25 @@ const PlayerState = ( props) => {
     }
   }
 
+  // repeat and random
+  const toggleRepeat = (od) => dispatch({ type: "TOGGLE_REPEAT", data: !state.repeat })
+  const toggleRandom = (od) => dispatch({ type: "TOGGLE_RANDOM", data: !state.random })
+
+  // end of song
+  const handleEnd = () => {
+    // Check for random and repeat options
+    if (state.random) {
+      return SetCurrent(~~(Math.random() * state.songslist.length)) // the double tilde is math.floor()
+    } else {
+      if (state.repeat) {
+        nextSong()
+      } else if (state.currentSong === state.songslist.length - 1) {
+        return
+      } else {
+        nextSong()
+      }
+    }
+  }
   return (
     <playerContext.Provider
       value={{
@@ -52,6 +71,14 @@ const PlayerState = ( props) => {
         playing: state.playing,
         audio: state.audio,
         SetCurrent,
+        nextSong,
+        prevSong,
+        SetCurrent,
+        toggleRandom,
+        toggleRepeat,
+        togglePlaying,
+        handleEnd,
+        songsSet,
       }}
     >
       {props.children}

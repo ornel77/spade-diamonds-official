@@ -197,7 +197,7 @@ header h3 {
   display: flex;
   flex-direction: row;
   align-items: center;
-  border-radius: 0 10px 10px 0;
+  border-radius: 10px;
 }
 .loi li:hover {
   background-color: #3f3f3f77;
@@ -207,13 +207,26 @@ header h3 {
 .tmbn_song {
   height: 65px;
   width: 65px;
+  border-radius: 10px;
   background: url("/promo.jpeg");
   background-size: contain;
-  
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+
+  .play_button {
+    z-index: 10;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #00000079;
+  }
 }
 .songlist {
   overflow-y: auto;
@@ -278,11 +291,16 @@ header h3 {
   margin: 0;
   width: 50px;
   background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
-#volBar::-moz-range-thumb {
+#volBar::-webkit-slider-runnable-track {
   height: 10px;
-  width: 3px;
+  
+  width: 5px;
   background: #2a6586;
   border-radius: 5px;
   cursor: pointer;

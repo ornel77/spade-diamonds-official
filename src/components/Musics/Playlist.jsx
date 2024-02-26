@@ -1,6 +1,5 @@
 import { musics } from "../../utils/data";
-import { FaPlay } from "react-icons/fa";
-import { FaPause } from "react-icons/fa";
+import { FaPlay, FaPause } from "react-icons/fa";
 import { IoMdRewind } from "react-icons/io";
 import { FaStepForward } from "react-icons/fa";
 import { FaStepBackward } from "react-icons/fa";
@@ -22,7 +21,7 @@ const Playlist = () => {
             onClick={() => SetCurrent(i)}
           >
             <div className="tmbn_song">
-              <FaPlay color="white" />
+              <FaPlay color="white" className="play_button"/>
             </div>
             <div className="songmeta_playlist">
               <span className="songname">{song.title} </span>
