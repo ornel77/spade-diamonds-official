@@ -30,25 +30,25 @@ export const musics = [
   {
     id:uuid(),
     title: "Wrong",
-    artist: "Spade Diamnonds",
+    artist: "Spade Diamonds",
     songSrc: "/begining.wav",
   },
   {
     id:uuid(),
     title: "Tomorrow Will Be The Same",
-    artist: "Spade Diamnonds",
+    artist: "Spade Diamonds",
     songSrc: "/begining.wav",
   },
   {
     id:uuid(),
     title: "Modest Moment",
-    artist: "Spade Diamnonds",
+    artist: "Spade Diamonds",
     songSrc: "/begining.wav",
   },
   {
     id:uuid(),
     title: "Despite",
-    artist: "Spade Diamnonds",
+    artist: "Spade Diamonds",
     songSrc: "/begining.wav",
   },
 ];
