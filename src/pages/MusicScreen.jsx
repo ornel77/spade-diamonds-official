@@ -1,10 +1,11 @@
-import React from 'react'
-import Musics from '../components/Musics/Musics'
+
+// import Musics from '../components/Musics/Musics'
+import MusicPlayer from '../components/MusicPlayer/MusicPlayer'
 
 const MusicScreen = () => {
   return (
     <>
-      <Musics />
+      <MusicPlayer />
     </>
   )
 }
