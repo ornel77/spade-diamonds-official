@@ -1,0 +1,25 @@
+@import '../../../variables';
+
+
+.card {
+    .controls {
+        .play {
+            background: linear-gradient(#fff 0%, #cecaca 100%);
+            &::before {
+                position: absolute;
+                content: "";
+                height: 2.5rem ;
+                width: 2.5rem;
+                border-radius: 50%;
+                background: linear-gradient(#8DADFF, #6E72A3 100%);
+                
+            }
+            .play-icons {
+                background: #fff;
+                background-clip: text;
+                -webkit-background-clip: text
+            }
+        }
+       
+    }
+}

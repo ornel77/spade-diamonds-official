@@ -31,24 +31,28 @@ export const musics = [
     id:uuid(),
     title: "Wrong",
     artist: "Spade Diamonds",
-    songSrc: "/begining.wav",
+    src: "/begining.wav",
+    thumbnail: "/sd7.jpeg"
   },
   {
     id:uuid(),
     title: "Tomorrow Will Be The Same",
     artist: "Spade Diamonds",
-    songSrc: "/begining.wav",
+    src: "/begining.wav",
+    thumbnail: "/promo.jpeg"
   },
   {
     id:uuid(),
     title: "Modest Moment",
     artist: "Spade Diamonds",
-    songSrc: "/begining.wav",
+    src: "/begining.wav",
+    thumbnail: "/sd5.jpeg"
   },
   {
     id:uuid(),
     title: "Despite",
     artist: "Spade Diamonds",
-    songSrc: "/begining.wav",
+    src: "/begining.wav",
+    thumbnail: "/sd6.jpeg"
   },
 ];
