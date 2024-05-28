@@ -15,12 +15,26 @@
                 background: linear-gradient(#8DADFF, #6E72A3 100%);
                 
             }
-            .play-icons {
+            .play-icon {
                 background: #fff;
                 background-clip: text;
                 -webkit-background-clip: text;
-                z-index: 12;
+                -webkit-text-fill-color: transparent ;
+                // z-index: 12;
+                position: absolute
             }
+        }
+        .volume {
+            background-color: #333;
+            border: 1px solid #555;
+            transition: bottom .2s linear;
+            
+            .volume-range {
+
+            }
+        }
+        .volume.show {
+            bottom: 0;
         }
        
     }

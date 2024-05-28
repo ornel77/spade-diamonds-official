@@ -8,7 +8,7 @@ const MusicPlayer = () => {
     <div className="container-player ">
       <div className="music-container min-h-screen">
         {/* <h2>Check Out Our Musics</h2> */}
-      <main>
+      <main className=' rounded-lg'>
         <Card props={{ musicNumber, setMusicNumber }} />
       </main>
       </div>

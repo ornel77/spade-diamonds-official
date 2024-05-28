@@ -45,14 +45,24 @@ const Card = ({ props: { musicNumber, setMusicNumber } }) => {
 
       {/* CONTROLS */}
       <div className="controls flex justify-between items-center mt-5 mb-7 ">
-        <MdRepeat />
-        <MdSkipPrevious size={32}/>
-        <div className="play w-12 h-12 rounded-full flex justify-center items-center relative">
-            <MdPlayArrow size={28} className="play-icons"/>
+        <MdRepeat className="cursor-pointer"/>
+        <MdSkipPrevious size={32} className="cursor-pointer"/>
+
+        {/* PLAY */}
+        <div className="play w-12 h-12 rounded-full flex justify-center items-center relative cursor-pointer">
+            <MdPlayArrow size={28} className="play-icon"/>
         </div>
-        <MdSkipNext size={32} />
-        <div className="volume">
-            <MdVolumeUp />
+        {/* END PLAY */}
+
+        <MdSkipNext size={32} className="cursor-pointer" />
+
+        {/* VOLUME */}
+        <MdVolumeUp className="cursor-pointer" />
+ 
+        <div className="volume w-full h-[50px] absolute bottom-[-10%] left-0 rounded-lg flex justify-between items-center p-6 z-10 gap-1">
+            <MdVolumeUp className="cursor-pointer" />
+            <input type="range" min={0} max={100} className="volume-range w-full h-1" />
+            <span>50</span>
         </div>
       </div>
 
