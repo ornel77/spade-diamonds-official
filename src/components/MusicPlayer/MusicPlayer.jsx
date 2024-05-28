@@ -3,11 +3,11 @@ import Card from './Card'
 import './MusicPlayer.scss'
 
 const MusicPlayer = () => {
-  const [musicNumber, setMusicNumber] = useState(0)
+  const [musicNumber, setMusicNumber] = useState(2)
   return (
-    <div className="container ">
+    <div className="container-player ">
       <div className="music-container min-h-screen">
-        <h2>Check Out Our Musics</h2>
+        {/* <h2>Check Out Our Musics</h2> */}
       <main>
         <Card props={{ musicNumber, setMusicNumber }} />
       </main>

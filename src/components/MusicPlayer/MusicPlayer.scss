@@ -11,8 +11,11 @@
     }
 }
 
-.container {
+.container-player {
+    // background: url('../../assets/image/bg-music.jpg') no-repeat center/cover;
+    padding-top: 60px;
     main {
+        position: relative;
         width: 360px;
         margin: 0 auto;
         border: 1px solid rgb(255,255,255,.1);

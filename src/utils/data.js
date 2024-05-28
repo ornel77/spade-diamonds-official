@@ -47,4 +47,18 @@ export const musics = [
     src: "/begining.wav",
     thumbnail: "/sd6.jpeg"
   },
+  {
+    id:uuid(),
+    title: "Despite",
+    artist: "Spade Diamonds",
+    src: "/begining.wav",
+    thumbnail: "/sd6.jpeg"
+  },
+  {
+    id:uuid(),
+    title: "Despite",
+    artist: "Spade Diamonds",
+    src: "/begining.wav",
+    thumbnail: "/sd6.jpeg"
+  },
 ];

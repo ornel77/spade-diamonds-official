@@ -1,4 +1,4 @@
-import { MdExpandMore, MdQueueMusic, MdSkipNext, MdSkipPrevious,MdRepeat, MdPlayArrow, MdVolumeUp     } from "react-icons/md";
+import { MdExpandMore, MdQueueMusic, MdSkipNext, MdSkipPrevious,MdRepeat, MdPlayArrow, MdVolumeUp } from "react-icons/md";
 import "./Card.scss";
 import { musics } from "../../utils/data";
 

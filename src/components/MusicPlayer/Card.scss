@@ -2,6 +2,7 @@
 
 
 .card {
+   
     .controls {
         .play {
             background: linear-gradient(#fff 0%, #cecaca 100%);
@@ -17,7 +18,8 @@
             .play-icons {
                 background: #fff;
                 background-clip: text;
-                -webkit-background-clip: text
+                -webkit-background-clip: text;
+                z-index: 12;
             }
         }
        
