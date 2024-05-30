@@ -20,6 +20,7 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
   const [play, setPlay] = useState(false);
   const [volume, setVolume] = useState(50);
   const [showVolume, setShowVolume] = useState(false);
+  const [repeat, setRepeat] = useState("repeat");
 
   const audioRef = useRef();
 
@@ -67,9 +68,13 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
     });
   };
 
+  const handleRepaet = () => {
+    setR
+  }
+
   useEffect(() => {
-    audioRef.current.volume = volume / 100 // 0 - 1 de base le volume est à 1
-  }, [volume])
+    audioRef.current.volume = volume / 100; // 0 - 1 de base le volume est à 1
+  }, [volume]);
 
   return (
     <section className="card w-full mx-auto shadow-md p-6 overflow-hidden">
@@ -125,7 +130,9 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
 
       {/* CONTROLS */}
       <div className="controls flex justify-between items-center mt-5 mb-7 ">
-        <MdRepeat className="cursor-pointer" />
+        <span onClick={handleRepaet}>
+          <MdRepeat className="cursor-pointer" />
+        </span>
         <MdSkipPrevious
           size={32}
           className="cursor-pointer"
@@ -162,7 +169,7 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
             showVolume && "show"
           }`}
         >
-          <span onClick={() => setVolume(v => v > 0 ? 0 : 100)}>
+          <span onClick={() => setVolume((v) => (v > 0 ? 0 : 100))}>
             {volume === 0 ? (
               <MdVolumeOff />
             ) : (
