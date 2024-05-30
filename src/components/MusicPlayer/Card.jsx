@@ -30,7 +30,6 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
   };
 
   const handlePlayingAudio = () => {
-    
     if(play) {
       audioRef.current.pause()
       setPlay(false)
@@ -38,6 +37,11 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
       audioRef.current.play()
       setPlay(true)
     }
+  }
+
+  const handleTimeUpdate = () => {
+    const currentTime = audioRef.current.currentTime
+    setCurrentTime(currentTime)
   }
 
   return (
@@ -131,6 +135,7 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
         hidden
         onLoadStart={handleLoadStart}
         ref={audioRef}
+        onTimeUpdate={handleTimeUpdate}
       />
     </section>
   );
