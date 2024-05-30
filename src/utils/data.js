@@ -30,7 +30,7 @@ export const musics = [
     id:uuid(),
     title: "Tomorrow Will Be The Same",
     artist: "Spade Diamonds",
-    src: "/begining.wav",
+    src: "/atonement.mp3",
     thumbnail: "/promo.jpeg"
   },
   {
@@ -44,7 +44,7 @@ export const musics = [
     id:uuid(),
     title: "Despite",
     artist: "Spade Diamonds",
-    src: "/begining.wav",
+    src: "/atonement.mp3",
     thumbnail: "/sd6.jpeg"
   },
 ];

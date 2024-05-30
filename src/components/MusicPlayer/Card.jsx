@@ -18,7 +18,8 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
   const [currentTime, setCurrentTime] = useState(0);
   const [play, setPlay] = useState(false);
 
-  const audioRef = useRef()
+  const audioRef = useRef();
+
   const handleLoadStart = (e) => {
     const src = e.nativeEvent.srcElement.src;
     const audio = new Audio(src);
@@ -27,22 +28,41 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
         setDuration(audio.duration);
       }
     };
+
+    if(play) {
+      audioRef.current.play()
+    }
   };
 
   const handlePlayingAudio = () => {
-    if(play) {
-      audioRef.current.pause()
-      setPlay(false)
+    if (play) {
+      audioRef.current.pause();
+      setPlay(false);
     } else {
-      audioRef.current.play()
-      setPlay(true)
+      audioRef.current.play();
+      setPlay(true);
     }
-  }
+  };
 
   const handleTimeUpdate = () => {
-    const currentTime = audioRef.current.currentTime
-    setCurrentTime(currentTime)
-  }
+    const current = audioRef.current.currentTime;
+    setCurrentTime(current);
+  };
+
+  const changeCurrentTime = (e) => {
+    const currentTime = Number(e.target.value);
+    audioRef.current.currentTime = currentTime;
+    setCurrentTime(currentTime);
+  };
+
+  const handleNextPrev = (n) => {
+    setMusicNumber((value) => {
+      // next
+      if (n > 0) return value + n > musics.length - 1 ? 0 : value + n;
+
+      return value + n < 0 ? musics.length - 1 : value + n;
+    });
+  };
 
   return (
     <section className="card w-full mx-auto shadow-md p-6 overflow-hidden">
@@ -83,8 +103,10 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
           name=""
           id=""
           min={0}
-          max={100}
+          max={duration}
+          value={currentTime}
           className="w-full h-1"
+          onChange={(e) => changeCurrentTime(e)}
         />
       </div>
 
@@ -97,7 +119,11 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
       {/* CONTROLS */}
       <div className="controls flex justify-between items-center mt-5 mb-7 ">
         <MdRepeat className="cursor-pointer" />
-        <MdSkipPrevious size={32} className="cursor-pointer" />
+        <MdSkipPrevious
+          size={32}
+          className="cursor-pointer"
+          onClick={() => handleNextPrev(-1)}
+        />
 
         {/* PLAY */}
         <div
@@ -112,7 +138,11 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
         </div>
         {/* END PLAY */}
 
-        <MdSkipNext size={32} className="cursor-pointer" />
+        <MdSkipNext
+          size={32}
+          className="cursor-pointer"
+          onClick={() => handleNextPrev(1)}
+        />
 
         {/* VOLUME */}
         <MdVolumeUp className="cursor-pointer" />
@@ -133,8 +163,8 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
       <audio
         src={musics[musicNumber].src}
         hidden
-        onLoadStart={handleLoadStart}
         ref={audioRef}
+        onLoadStart={handleLoadStart}
         onTimeUpdate={handleTimeUpdate}
       />
     </section>
