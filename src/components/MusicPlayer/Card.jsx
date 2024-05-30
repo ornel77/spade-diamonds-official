@@ -6,11 +6,40 @@ import {
   MdRepeat,
   MdPlayArrow,
   MdVolumeUp,
+  MdOutlinePause,
 } from "react-icons/md";
 import "./Card.scss";
 import { musics } from "../../utils/data";
+import { useEffect, useRef, useState } from "react";
+import { timer } from "../../utils/timer";
 
 const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
+  const [duration, setDuration] = useState(0);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [play, setPlay] = useState(false);
+
+  const audioRef = useRef()
+  const handleLoadStart = (e) => {
+    const src = e.nativeEvent.srcElement.src;
+    const audio = new Audio(src);
+    audio.onloadedmetadata = function () {
+      if (audio.readyState > 0) {
+        setDuration(audio.duration);
+      }
+    };
+  };
+
+  const handlePlayingAudio = () => {
+    
+    if(play) {
+      audioRef.current.pause()
+      setPlay(false)
+    } else {
+      audioRef.current.play()
+      setPlay(true)
+    }
+  }
+
   return (
     <section className="card w-full mx-auto shadow-md p-6 overflow-hidden">
       {/* NAV PLAYER */}
@@ -21,7 +50,7 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
         <span>
           Now Playing {musicNumber + 1}/{musics.length}
         </span>
-        <span onClick={() => setOpen(prev => !prev)}>
+        <span onClick={() => setOpen((prev) => !prev)}>
           <MdQueueMusic className="cursor-pointer" />
         </span>
       </div>
@@ -57,8 +86,8 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
 
       {/* TIMER */}
       <div className="timer w-full flex justify-between text-sm text-slate-400">
-        <span>00:00</span>
-        <span>03:45</span>
+        <span>{timer(currentTime)} </span>
+        <span> {timer(duration)} </span>
       </div>
 
       {/* CONTROLS */}
@@ -67,8 +96,15 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
         <MdSkipPrevious size={32} className="cursor-pointer" />
 
         {/* PLAY */}
-        <div className="play w-12 h-12 rounded-full flex justify-center items-center relative cursor-pointer">
-          <MdPlayArrow size={28} className="play-icon" />
+        <div
+          className="play w-12 h-12 rounded-full flex justify-center items-center relative cursor-pointer"
+          onClick={handlePlayingAudio}
+        >
+          {play ? (
+            <MdOutlinePause size={28} className="play-icon" />
+          ) : (
+            <MdPlayArrow size={28} className="play-icon" />
+          )}
         </div>
         {/* END PLAY */}
 
@@ -90,7 +126,12 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
       </div>
 
       {/* AUDIO */}
-      <audio src={musics[musicNumber].src} hidden></audio>
+      <audio
+        src={musics[musicNumber].src}
+        hidden
+        onLoadStart={handleLoadStart}
+        ref={audioRef}
+      />
     </section>
   );
 };

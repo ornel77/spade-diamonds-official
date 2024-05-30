@@ -24,6 +24,7 @@ const List = ({ musicNumber, setMusicNumber, open, setOpen }) => {
             onClick={() => setMusicNumber(index)}
           >
             <div className="row">
+              
               <span>{music.title} </span>
               <p> {music.artist} </p>
             </div>
@@ -41,7 +42,6 @@ const Duration = ({music}) => {
   const [duration, setDuration] = useState("00:00")
   useEffect(() => {
     const audio = new Audio(music.src)
-    console.log(audio.duration)
     // Occurs when the duration and dimensions of the media have been determined.
     audio.onloadedmetadata = function() {
       if(audio.readyState > 0) {
