@@ -6,6 +6,7 @@ import {
   MdRepeat,
   MdPlayArrow,
   MdVolumeUp,
+  MdVolumeOff,
   MdOutlinePause,
 } from "react-icons/md";
 import "./Card.scss";
@@ -17,6 +18,8 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
   const [play, setPlay] = useState(false);
+  const [volume, setVolume] = useState(50);
+  const [showVolume, setShowVolume] = useState(false);
 
   const audioRef = useRef();
 
@@ -29,8 +32,8 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
       }
     };
 
-    if(play) {
-      audioRef.current.play()
+    if (play) {
+      audioRef.current.play();
     }
   };
 
@@ -63,6 +66,10 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
       return value + n < 0 ? musics.length - 1 : value + n;
     });
   };
+
+  useEffect(() => {
+    audioRef.current.volume = volume / 100 // 0 - 1 de base le volume est à 1
+  }, [volume])
 
   return (
     <section className="card w-full mx-auto shadow-md p-6 overflow-hidden">
@@ -145,17 +152,33 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
         />
 
         {/* VOLUME */}
-        <MdVolumeUp className="cursor-pointer" />
+        <MdVolumeUp
+          className="cursor-pointer"
+          onClick={() => setShowVolume((prev) => !prev)}
+        />
 
-        <div className="volume w-full h-[50px] absolute bottom-[-10%] left-0 rounded-lg flex justify-between items-center p-6 z-10 gap-1">
-          <MdVolumeUp className="cursor-pointer" />
+        <div
+          className={`volume w-full h-[50px] absolute bottom-[-10%] left-0 rounded-lg flex justify-between items-center p-6 z-10 gap-1 ${
+            showVolume && "show"
+          }`}
+        >
+          <span onClick={() => setVolume(v => v > 0 ? 0 : 100)}>
+            {volume === 0 ? (
+              <MdVolumeOff />
+            ) : (
+              <MdVolumeUp className="cursor-pointer" />
+            )}
+          </span>
+
           <input
             type="range"
             min={0}
             max={100}
             className="volume-range w-full h-1"
+            onChange={(e) => setVolume(Number(e.target.value))}
+            value={volume}
           />
-          <span>50</span>
+          <span> {volume} </span>
         </div>
       </div>
 
