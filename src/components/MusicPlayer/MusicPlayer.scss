@@ -1,17 +1,43 @@
 @import '../../../variables';
 
 
-
+.large-container {
+    background: url('../../assets/image/wave2.jpg') no-repeat center/cover;
+    // filter: sepia(100%);
+}
 
 .container-player {
-    // background: url('../../assets/image/bg-music.jpg') no-repeat center/cover;
-    // padding-top: 60px;
     h2 {
         margin-bottom: 32px;
         text-align: center;
         font-family: $title-font;
         color: $white;
         font-size: 32px;
+    }
+    .shape {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        border-radius: 50%;
+        
+    }
+    .shape1 {
+        background: radial-gradient(circle at 35px 65px, #9B22EA, #005 );
+        left: -65px;
+        top: -65px;
+    }
+    .shape2 {
+        background: radial-gradient(circle at 45px 90px, #EA22B1, #111 );
+        right: -65px;
+        bottom: -65px;
+    }
+    .shape3 {
+        width: 60px;
+        height: 60px;
+        background: #08E2FF;
+        right: 7px;
+        top: 10px;
+        filter: blur(20px);
     }
     main {
         position: relative;
