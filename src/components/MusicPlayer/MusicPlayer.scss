@@ -1,52 +1,51 @@
-@import '../../../variables';
-
+@import "../../../variables";
 
 .large-container {
-    background: url('../../assets/image/wave2.jpg') no-repeat center/cover;
-    // filter: sepia(100%);
+  background: url("../../assets/image/wave2.jpg") no-repeat center/cover;
 }
 
 .container-player {
-    h2 {
-        margin-bottom: 32px;
-        text-align: center;
-        font-family: $title-font;
-        color: $white;
-        font-size: 32px;
-    }
-    .shape {
-        width: 150px;
-        height: 150px;
-        position: absolute;
-        border-radius: 50%;
-        
-    }
-    .shape1 {
-        background: radial-gradient(circle at 35px 65px, #9B22EA, #005 );
-        left: -65px;
-        top: -65px;
-    }
-    .shape2 {
-        background: radial-gradient(circle at 45px 90px, #EA22B1, #111 );
-        right: -65px;
-        bottom: -65px;
-    }
-    .shape3 {
-        width: 60px;
-        height: 60px;
-        background: #08E2FF;
-        right: 7px;
-        top: 10px;
-        filter: blur(20px);
-    }
-    main {
-        position: relative;
-        width: 360px;
-        margin: 0 auto;
-        border: 1px solid rgb(255,255,255,.1);
-        box-shadow: 0 0 20px rgba(7,15,15,.5);
-        // border-radius: 15px;
-        overflow: hidden;
-        backdrop-filter: blur(3px);
-    }
+  h2 {
+    margin-bottom: 32px;
+    text-align: center;
+    font-family: $title-font;
+    color: $white;
+    font-size: 32px;
+  }
+  .shape {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    border-radius: 50%;
+  }
+  .shape1 {
+    background: radial-gradient(circle at 35px 65px, #9b22ea, #005);
+    left: -65px;
+    top: -65px;
+  }
+  .shape2 {
+    background: radial-gradient(circle at 45px 90px, #ea22b1, #111);
+    right: -65px;
+    bottom: -65px;
+  }
+  .shape3 {
+    width: 60px;
+    height: 60px;
+    background: #08e2ff;
+    right: 7px;
+    top: 10px;
+    filter: blur(20px);
+  }
+  main {
+    user-select: none;
+    position: relative;
+    width: 360px;
+    margin: 0 auto;
+    border: 1px solid rgb(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(7, 15, 15, 0.5);
+    // border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(3px);
+    
+  }
 }

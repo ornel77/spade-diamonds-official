@@ -1,7 +1,6 @@
 
 // import Musics from '../components/Musics/Musics'
 import MusicPlayer from '../components/MusicPlayer/MusicPlayer'
-
 import '../components/MusicPlayer/MusicPlayer.scss'
 
 const MusicScreen = () => {
