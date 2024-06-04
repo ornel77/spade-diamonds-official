@@ -8,6 +8,8 @@ import {
   MdVolumeUp,
   MdVolumeOff,
   MdOutlinePause,
+  MdOutlineShuffle,
+  MdRepeatOne,
 } from "react-icons/md";
 import "./Card.scss";
 import { musics } from "../../utils/data";
@@ -68,8 +70,51 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
     });
   };
 
-  const handleRepaet = () => {
-    setR
+  const handleRepeat = () => {
+    setRepeat((value) => {
+      switch (value) {
+        case "repeat":
+          return "repeat_one";
+          break;
+        // case "repeat_one":
+        //   return "shuffle";
+        //   break;
+
+        default:
+          return "repeat";
+          break;
+      }
+    });
+  };
+  
+  const EndedAudio = () => {
+    console.log(repeat);
+    console.log("ended audio");
+    switch (repeat) {
+      case "repeat_one":
+        return audioRef.current.play();
+        break;
+      // case "shuffle":
+      //   return handleShuffle();
+      //   break;
+
+      default:
+        return handleNextPrev(1)
+        break;
+    }
+  };
+
+  const handleShuffle = () => {
+    const num = randomNumber()
+    setMusicNumber(num)
+  }
+
+  const randomNumber = () => {
+    const number = Math.floor(Math.random() * (musics.length - 1))
+    if(number === musicNumber) {
+      return randomNumber()
+    }
+    return number
   }
 
   useEffect(() => {
@@ -130,9 +175,9 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
 
       {/* CONTROLS */}
       <div className="controls flex justify-between items-center mt-5 mb-7 ">
-        <span onClick={handleRepaet}>
-          <MdRepeat className="cursor-pointer" />
-        </span>
+        <i onClick={handleRepeat} className="material-icons cursor-pointer" size={28}>
+          {repeat}
+        </i>
         <MdSkipPrevious
           size={32}
           className="cursor-pointer"
@@ -160,6 +205,7 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
 
         {/* VOLUME */}
         <MdVolumeUp
+        size={28}
           className="cursor-pointer"
           onClick={() => setShowVolume((prev) => !prev)}
         />
@@ -196,6 +242,7 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
         ref={audioRef}
         onLoadStart={handleLoadStart}
         onTimeUpdate={handleTimeUpdate}
+        onEnded={EndedAudio}
       />
     </section>
   );
