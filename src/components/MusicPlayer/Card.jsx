@@ -157,8 +157,6 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
       <div className="progress mt-4">
         <input
           type="range"
-          name=""
-          id=""
           min={0}
           max={duration}
           value={currentTime}
