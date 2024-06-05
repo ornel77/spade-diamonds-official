@@ -1,8 +1,13 @@
-import React from 'react'
+import VideoList from "../components/Videos/VideoList"
+
 
 const VideoScreen = () => {
   return (
-    <div className=' h-[77vh] flex justify-center items-center text-2xl'>Coming Soon :)</div>
+    <div className='lg-container'>
+      <h2 className="text-center text-2xl mb-8">Videos</h2>
+
+      <VideoList />
+    </div>
   )
 }
 

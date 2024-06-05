@@ -12,30 +12,30 @@
     color: $white;
     font-size: 32px;
   }
-  .shape {
-    width: 150px;
-    height: 150px;
-    position: absolute;
-    border-radius: 50%;
-  }
-  .shape1 {
-    background: radial-gradient(circle at 35px 65px, #9b22ea, #005);
-    left: -65px;
-    top: -65px;
-  }
-  .shape2 {
-    background: radial-gradient(circle at 45px 90px, #ea22b1, #111);
-    right: -65px;
-    bottom: -65px;
-  }
-  .shape3 {
-    width: 60px;
-    height: 60px;
-    background: #08e2ff;
-    right: 7px;
-    top: 10px;
-    filter: blur(20px);
-  }
+  // .shape {
+  //   width: 150px;
+  //   height: 150px;
+  //   position: absolute;
+  //   border-radius: 50%;
+  // }
+  // .shape1 {
+  //   background: radial-gradient(circle at 35px 65px, #9b22ea, #005);
+  //   left: -65px;
+  //   top: -65px;
+  // }
+  // .shape2 {
+  //   background: radial-gradient(circle at 45px 90px, #ea22b1, #111);
+  //   right: -65px;
+  //   bottom: -65px;
+  // }
+  // .shape3 {
+  //   width: 60px;
+  //   height: 60px;
+  //   background: #08e2ff;
+  //   right: 7px;
+  //   top: 10px;
+  //   filter: blur(20px);
+  // }
   main {
     user-select: none;
     position: relative;
