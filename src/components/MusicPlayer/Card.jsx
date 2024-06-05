@@ -128,14 +128,14 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
     <section className="card w-full mx-auto shadow-md p-6 overflow-hidden">
       {/* NAV PLAYER */}
       <div className="nav w-full flex gap-1 justify-between items-center">
-        <span>
-          <MdExpandMore className="cursor-pointer" />
-        </span>
+        <div>
+          {/* <MdExpandMore className="cursor-pointer" /> */}
+        </div>
         <span>
           Now Playing {musicNumber + 1}/{musics.length}
         </span>
         <span onClick={() => setOpen((prev) => !prev)}>
-          <MdQueueMusic className="cursor-pointer" />
+          <MdQueueMusic className="cursor-pointer" size={28}/>
         </span>
       </div>
 
