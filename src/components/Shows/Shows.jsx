@@ -8,7 +8,7 @@ const Shows = () => {
     <section className="container">
       <div className="show-container">
         <h2>Live Tour</h2>
-        <div className="table-wrap">
+        <div className="table-wrap overflow-x-scroll md:overflow-x-hidden">
           <Table className="show-list bg-slate-900">
             <Table.Head>
               <Table.HeadCell className="bg-slate-950 text-slate-100">date</Table.HeadCell>
