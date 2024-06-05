@@ -15,6 +15,7 @@ import "./Card.scss";
 import { musics } from "../../utils/data";
 import { useEffect, useRef, useState } from "react";
 import { timer } from "../../utils/timer";
+import { visualizer } from "../../utils/visualizer";
 
 const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
   const [duration, setDuration] = useState(0);
@@ -25,6 +26,7 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
   const [repeat, setRepeat] = useState("repeat");
 
   const audioRef = useRef();
+  const canvasRef = useRef()
 
   const handleLoadStart = (e) => {
     const src = e.nativeEvent.srcElement.src;
@@ -41,6 +43,7 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
   };
 
   const handlePlayingAudio = () => {
+    visualizer(audioRef.current, canvasRef.current, play)
     if (play) {
       audioRef.current.pause();
       setPlay(false);
@@ -86,7 +89,7 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
       }
     });
   };
-  
+
   const EndedAudio = () => {
     console.log(repeat);
     console.log("ended audio");
@@ -99,23 +102,23 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
       //   break;
 
       default:
-        return handleNextPrev(1)
+        return handleNextPrev(1);
         break;
     }
   };
 
   const handleShuffle = () => {
-    const num = randomNumber()
-    setMusicNumber(num)
-  }
+    const num = randomNumber();
+    setMusicNumber(num);
+  };
 
   const randomNumber = () => {
-    const number = Math.floor(Math.random() * (musics.length - 1))
-    if(number === musicNumber) {
-      return randomNumber()
+    const number = Math.floor(Math.random() * (musics.length - 1));
+    if (number === musicNumber) {
+      return randomNumber();
     }
-    return number
-  }
+    return number;
+  };
 
   useEffect(() => {
     audioRef.current.volume = volume / 100; // 0 - 1 de base le volume est à 1
@@ -141,8 +144,9 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
         <img
           src={musics[musicNumber].thumbnail}
           alt=""
-          className="rounded-full w-48 h-48 object-cover"
+          className={`rounded-full w-48 h-48 object-cover ${play ? 'playing' : ''} `}
         />
+        <canvas ref={canvasRef}/>
       </div>
 
       {/* DETAILS */}
@@ -162,6 +166,11 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
           value={currentTime}
           className="w-full h-1"
           onChange={(e) => changeCurrentTime(e)}
+          style={{
+            background: `linear-gradient(to right, #f4761c ${
+              (currentTime / duration) * 100
+            }%, #000 ${(currentTime / duration) * 100}%)`,
+          }}
         />
       </div>
 
@@ -173,7 +182,11 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
 
       {/* CONTROLS */}
       <div className="controls flex justify-between items-center mt-5 mb-7 ">
-        <i onClick={handleRepeat} className="material-icons cursor-pointer" size={28}>
+        <i
+          onClick={handleRepeat}
+          className="material-icons cursor-pointer"
+          size={28}
+        >
           {repeat}
         </i>
         <MdSkipPrevious
@@ -203,7 +216,7 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
 
         {/* VOLUME */}
         <MdVolumeUp
-        size={28}
+          size={28}
           className="cursor-pointer"
           onClick={() => setShowVolume((prev) => !prev)}
         />
@@ -228,6 +241,9 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
             className="volume-range w-full h-1"
             onChange={(e) => setVolume(Number(e.target.value))}
             value={volume}
+            style={{
+              background: `linear-gradient(to right, #f4761c ${volume}%, #000 ${volume}%)`,
+            }}
           />
           <span> {volume} </span>
         </div>
