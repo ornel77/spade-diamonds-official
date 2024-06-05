@@ -3,13 +3,17 @@
 .show-container {
     // height: 50vh;
     margin-bottom: 80px;
-
+    
     h2 {
         margin-bottom: 16px;
         text-align: center;
         font-family: $title-font;
         color: $blue;
         font-size: 32px;
+    }
+    .table-wrap {
+        overflow-x: scroll;
+
     }
     
     .show-list {

@@ -10,7 +10,7 @@ function Footer() {
   return (
     <footer>
       <div className="container footer-container">
-        <p className="copy">&copy; SPADE DIAMONDS 2023</p>
+        <p className="copy text-sm">&copy; SPADE DIAMONDS 2024</p>
         <ul className="socials">
           <li>
             <a href="https://www.instagram.com/spadediamonds/" target="_blank">
