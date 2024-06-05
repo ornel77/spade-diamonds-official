@@ -2,19 +2,21 @@ import { v4 as uuid } from "uuid";
 export const shows = [
   {
     id: uuid(),
-    date: "26/03/24",
-    time: "20h",
-    city: "Paris",
-    venue: "Les Disquaires",
-    infoLink: "https://lesdisquaires.com/",
+    date: "22/06/24",
+    time: "21h",
+    city: "Villemoisson sur Orge",
+    venue: "-",
+    infoLink: "google.com",
+    isInfo: true
   },
   {
     id: uuid(),
-    date: "22/06/24",
+    date: "13/07/24",
     time: "TBA",
-    city: "Villeneuve sur orge",
-    venue: "Metassos",
-    infoLink: "https://lesdisquaires.com/",
+    city: "Paris",
+    venue: "Le Truskel",
+    infoLink: "",
+    isInfo: false
   },
 ];
 

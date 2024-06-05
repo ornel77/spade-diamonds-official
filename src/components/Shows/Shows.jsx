@@ -15,7 +15,7 @@ const Shows = () => {
               <Table.HeadCell className="bg-slate-950 text-slate-100">time</Table.HeadCell>
               <Table.HeadCell className="bg-slate-950 text-slate-100">city</Table.HeadCell>
               <Table.HeadCell className="bg-slate-950 text-slate-100">venue</Table.HeadCell>
-              <Table.HeadCell className="bg-slate-950 text-slate-100">Info</Table.HeadCell>
+              <Table.HeadCell className="bg-slate-950 text-slate-100">More Info</Table.HeadCell>
             </Table.Head>
             <Table.Body className="divide-y">
               {shows.map((show) => (

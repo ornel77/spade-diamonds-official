@@ -135,7 +135,7 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
           Now Playing {musicNumber + 1}/{musics.length}
         </span>
         <span onClick={() => setOpen((prev) => !prev)}>
-          <MdQueueMusic className="cursor-pointer" size={28}/>
+          <MdQueueMusic className="cursor-pointer" size={20}/>
         </span>
       </div>
 
