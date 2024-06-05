@@ -29,21 +29,21 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
   const canvasRef = useRef()
 
   const handleLoadStart = (e) => {
-    const src = e.nativeEvent.srcElement.src;
-    const audio = new Audio(src);
-    audio.onloadedmetadata = function () {
-      if (audio.readyState > 0) {
-        setDuration(audio.duration);
-      }
-    };
-
+    // const src = e.nativeEvent.srcElement.src;
+    // const audio = new Audio(src);
+    // audio.onloadedmetadata = function () {
+    //   if (audio.readyState > 0) {
+    //     setDuration(audio.duration);
+    //   }
+    // };
+    setDuration(audioRef.current.duration)
     if (play) {
       audioRef.current.play();
     }
   };
 
   const handlePlayingAudio = () => {
-    visualizer(audioRef.current, canvasRef.current, play)
+    // visualizer(audioRef.current, canvasRef.current, play)
     if (play) {
       audioRef.current.pause();
       setPlay(false);
@@ -144,9 +144,9 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
         <img
           src={musics[musicNumber].thumbnail}
           alt=""
-          className={`rounded-full w-48 h-48 object-cover ${play ? 'playing' : ''} `}
+          className={`rounded-lg w-48 h-48 object-cover`}
         />
-        <canvas ref={canvasRef}/>
+        {/* <canvas ref={canvasRef}/> */}
       </div>
 
       {/* DETAILS */}
@@ -254,7 +254,7 @@ const Card = ({ props: { musicNumber, setMusicNumber, setOpen } }) => {
         src={musics[musicNumber].src}
         hidden
         ref={audioRef}
-        onLoadStart={handleLoadStart}
+        onLoadedData={handleLoadStart}
         onTimeUpdate={handleTimeUpdate}
         onEnded={EndedAudio}
       />
