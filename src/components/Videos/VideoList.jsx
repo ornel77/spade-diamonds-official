@@ -6,7 +6,6 @@ const VideoList = () => {
     <div className='flex flex-wrap items-center justify-center gap-5 mb-6'>
       {videos.map((video) => (
         <YoutubeEmbed key={video.id} video={video} />
-        // <p>video</p>
       ))}
     </div>
   );
