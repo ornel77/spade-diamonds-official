@@ -13,7 +13,7 @@ function Hero() {
     //     </div>
         
     // </section>
-    <div className="h-56 sm:h-64 xl:h-72 2xl:h-96 pt-16">
+    <div className="h-56 sm:h-64 xl:h-72 2xl:h-96 pt-16 mb-6">
     {/* <Carousel pauseOnHover slide={false}> */}
       {/* <img src="/sd6.jpeg" alt="..." className='h-full object-center object-cover' /> */}
       {/* <img src="/sd5.jpeg" alt="..." />
