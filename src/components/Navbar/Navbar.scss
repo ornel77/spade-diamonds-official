@@ -1,7 +1,15 @@
 @import '../../../variables';
 
-.nav-container {
+
+
+.fixed-container {
+    background-color: $background-color;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    .nav-container {
     display: flex;
+    
     width: 100%;
     justify-content: space-between;
     align-items: center;
@@ -11,6 +19,7 @@
     h2 {
         text-align: center;
         color: $white;
+        margin: 0;
     }
 
     .nav-list {
@@ -60,12 +69,16 @@
         left: -100%;
     }
 }
+}
+
+
 
 /* -------------------------------------------------------------------------- */
 /*                                MEDIA QUERIES                               */
 /* -------------------------------------------------------------------------- */
 @media screen and (max-width: 420px) {
-    .nav-container {
+    .fixed-container {
+        .nav-container {
         display: initial;
 
         .nav-list {
@@ -115,5 +128,6 @@
                 height: 100%;
             }
         }
+    }
     }
 }

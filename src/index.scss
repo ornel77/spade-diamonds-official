@@ -23,6 +23,14 @@ a {
   cursor: pointer;
 }
 
+h2 {
+        margin-bottom: 16px;
+        text-align: center;
+        font-family: $title-font;
+        color: $blue;
+        font-size: 32px;
+    }
+
 ul {
   list-style: none;
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import illu from '../../assets/image/sd7.jpeg'
 import './About.scss'
 
@@ -10,14 +10,7 @@ function About() {
         <div className="about-sub-container">
             <div className='about-content'>
               <p>
-              Spade Diamonds (ex Look at Me) est un groupe de rock issu de la scène
-              actuelle. Formé en 2008, il est composé de quatre artistes de la même
-              famille basés à Meaux. Par une approche pop et réfléchie, ils abordent leurs
-              mélodies et leurs textes en observant le monde concret et intelligible.
-              Sur scène, la réflexion laisse place à l’expression : c’est dans la plus grande
-              tradition rock que Spade Diamonds s’exprime corps et âmes. Le Rock
-              anglais en fond sonore avant les répétitions, il influence fondamentalement
-              le son de Spade Diamonds.
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci itaque corrupti ex est perferendis possimus maxime rem necessitatibus minima consequatur pariatur, recusandae amet animi quasi velit atque quam assumenda quisquam?
               </p>
             </div>
             <div className="about-illustration">
