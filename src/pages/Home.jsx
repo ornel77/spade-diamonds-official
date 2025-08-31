@@ -3,12 +3,12 @@ import About from "../components/About/About";
 import Members from "../components/Members/Members";
 import Shows from "../components/ShowsNew/Shows";
 import Spotify from "../components/Spotify/Spotify";
-// import GodotGame from "../components/GodotGame";
+import GodotGame from "../components/GodotGame";
 
 function Home() {
   return (
-    <div>
-      <Hero />
+    <div className="pt-24">
+      {/* <Hero /> */}
       {/* <GodotGame /> */}
       <Spotify />
       <Shows />

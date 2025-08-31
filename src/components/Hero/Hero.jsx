@@ -13,12 +13,12 @@ function Hero() {
     //     </div>
         
     // </section>
-    <div className="h-56 sm:h-64 xl:h-72 2xl:h-96 pt-16 mb-6">
+    <div className="h-56 sm:h-64 xl:h-[500px] 2xl:h-[500px] mb-6 bg-[url(/orne.JPG)] md:bg-cover bg-contain bg-no-repeat">
     {/* <Carousel pauseOnHover slide={false}> */}
       {/* <img src="/sd6.jpeg" alt="..." className='h-full object-center object-cover' /> */}
       {/* <img src="/sd5.jpeg" alt="..." />
       <img src="/sd7.jpeg" alt="..." /> */}
-      <img src="hero.jpeg" alt="..." className='h-full object-center object-cover'/>
+      {/* <img src="ornedwend.JPG" alt="..." className='h-full object-cover'/> */}
     {/* </Carousel> */}
   </div>
   )

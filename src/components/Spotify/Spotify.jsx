@@ -1,37 +1,36 @@
 const Spotify = () => {
   return (
-    <section className="container">
-      <h2>Spotify</h2>
-      <iframe
-        style={{ borderRadius: "12px" }}
-        src="https://open.spotify.com/embed/track/5eIduUEFeXYhFFqPKWcr1Y?utm_source=generator"
-        width="100%"
-        height="380"
-        frameBorder="0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"
-      ></iframe>
-      <iframe
-        style={{ borderRadius: "12px" }}
-        src="https://open.spotify.com/embed/track/5eIduUEFeXYhFFqPKWcr1Y?utm_source=generator&theme=0"
-        width="100%"
-        height="380"
-        frameBorder="0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"
-      ></iframe>
-
-      <iframe
-        data-testid="embed-iframe"
-        style={{ borderRadius: "12px" }}
-        src="https://open.spotify.com/embed/artist/0khcpWfdS2CrkJZVVKiD7I?utm_source=generator"
-        width="100%"
-        height="352"
-        allowfullscreen=""
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"
-      ></iframe>
-    </section>
+    <div className="">
+      <section className="container">
+        <iframe
+          style={{ borderRadius: "12px" }}
+          src="https://open.spotify.com/embed/track/5eIduUEFeXYhFFqPKWcr1Y?utm_source=generator"
+          width="100%"
+          height="380"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
+        <div>
+          <p className="text-2xl text-center">And also on :</p>
+          <div className="flex w-full  items-center justify-center my-6 gap-5">
+            <a
+              href="https://www.deezer.com/fr/artist/279882841"
+              className="bg-white rounded-md block w-44 px-2"
+              target="_blank"
+            >
+              <img src="/deezer.svg" alt="" className="h-16 object-contain " />
+            </a>
+            <a
+              href="https://music.apple.com/us/artist/spade-diamonds/1765697081"
+              className="bg-white rounded-md block w-44 px-2 hover:bg-opacity-80 transition-all duration-300"
+              target="_blank"
+            >
+              <img src="/apple.png" alt="" className="h-16 object-contain " />
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 export default Spotify;

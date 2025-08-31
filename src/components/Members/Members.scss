@@ -9,19 +9,19 @@
     h2 {
         margin-bottom: 16px;
         text-align: center;
-        font-family: $title-font;
-        color: $blue;
         font-size: 32px;
     }
     .grid-container {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 24px;
         text-align: center;
 
         img {
             border-radius: 15px;
             margin-bottom: 8px;
+            height: 400px;
+            object-fit: cover;
         }
 
         .sub-container {
@@ -30,12 +30,12 @@
             .name {
                 color: $light-pink;
                 text-transform: uppercase;
-                // font-size: 18px;
+                font-size: 18px;
             }
             
             .function {
                 letter-spacing: 1px;
-                font-size: 14px;
+                font-size: 16px;
             }
         }
     }
@@ -44,10 +44,10 @@
 /* -------------------------------------------------------------------------- */
 /*                                MEDIA QUERIES                               */
 /* -------------------------------------------------------------------------- */
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 426px) {
     .members-container {
         .grid-container {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(1, 1fr);
             margin-bottom: 64px;
         }
     }
