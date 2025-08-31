@@ -29,7 +29,9 @@ function Navbar() {
             </ul>
           </nav> */}
         <div className="band-name">
-          <h2 className="text-xl">SPADE DIAMONDS</h2>
+          <a href="#home" className="cursor-pointer">
+            <h2 className="text-xl cursor-pointer">SPADE DIAMONDS</h2>
+          </a>
         </div>
         <ul className="socials">
           <li>
@@ -62,7 +64,10 @@ function Navbar() {
         </ul>
         {/* Burger Icons */}
         <div className="container burger-menu" onClick={handleClick}>
-          <img src={logo} alt="" />
+          <a href="#home" className="flex gap-3 items-center">
+            <img src={logo} alt="" />
+            <span>SPADE DIAMONDS</span>
+          </a>
           {/* <div className='burger-icons'>
               {!nav ? <HiMenuAlt3 size={30}/> : <FaTimes size={30}/>}
             </div> */}

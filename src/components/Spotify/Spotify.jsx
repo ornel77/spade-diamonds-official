@@ -1,6 +1,6 @@
 const Spotify = () => {
   return (
-    <div className="">
+    <div className="md:flex justify-center items-center md:h-screen">
       <section className="container">
         <iframe
           style={{ borderRadius: "12px" }}
@@ -15,7 +15,7 @@ const Spotify = () => {
           <div className="flex w-full  items-center justify-center my-6 gap-5">
             <a
               href="https://www.deezer.com/fr/artist/279882841"
-              className="bg-white rounded-md block w-44 px-2"
+              className="bg-white rounded-md block w-44 px-2 hover:bg-opacity-80 transition-all duration-300"
               target="_blank"
             >
               <img src="/deezer.svg" alt="" className="h-16 object-contain " />
