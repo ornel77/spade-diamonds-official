@@ -7,7 +7,7 @@ import GodotGame from "../components/GodotGame";
 
 function Home() {
   return (
-    <div className="pt-24 scroll-smooth 2xl:text-xl" id="home">
+    <div className="pt-24 scroll-smooth" id="home">
       {/* <Hero /> */}
       {/* <GodotGame /> */}
       <Spotify />
