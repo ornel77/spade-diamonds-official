@@ -1,6 +1,6 @@
 const Spotify = () => {
   return (
-    <div className="md:flex justify-center items-center md:h-screen">
+    <div className="md:flex justify-center items-center md:h-[80vh]">
       <section className="container">
         <iframe
           style={{ borderRadius: "12px" }}
