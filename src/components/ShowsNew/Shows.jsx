@@ -26,7 +26,7 @@ const Shows = () => {
       <div className="show-container">
         <h2>Shows</h2>
         {currentShows.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center justify-center items-center gap-9">
+          <div className="grid grid-cols-1 md:grid-cols-2 md:justify-items-center justify-center items-center gap-9">
             {currentShows.map((show) => (
               <CurrentShowsItem key={show.id} show={show} />
             ))}
