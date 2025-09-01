@@ -2,7 +2,7 @@ import { v4 as uuid } from "uuid";
 export const shows = [
   {
     id: uuid(),
-    date: "13/07/24",
+    date: "2024-07-13",
     year: "2024",
     time: "",
     location: "Paris, France",
@@ -12,7 +12,7 @@ export const shows = [
   },
   {
     id: uuid(),
-    date: "22/06/24",
+    date: "2024-06-22",
     year: "2024",
     time: "",
     location: "Villemoisson sur Orge, France",
@@ -22,7 +22,7 @@ export const shows = [
   },
   {
     id: uuid(),
-    date: "26/03/24",
+    date: "2024-03-26",
     year: "2024",
     time: "",
     location: "Paris, France",
@@ -32,7 +32,7 @@ export const shows = [
   },
   {
     id: uuid(),
-    date: "17/12/22",
+    date: "2022-12-17",
     year: "2022",
     time: "",
     location: "Voisin le Bretonneux, France",
@@ -42,7 +42,7 @@ export const shows = [
   },
   {
     id: uuid(),
-    date: "16/12/22",
+    date: "2022-12-16",
     year: "2022",
     time: "",
     location: "Paris, France",
@@ -52,7 +52,7 @@ export const shows = [
   },
   {
     id: uuid(),
-    date: "20/02/20",
+    date: "2020-02-20",
     year: "2020",
     time: "",
     location: "Paris, France",
@@ -62,7 +62,7 @@ export const shows = [
   },
   {
     id: uuid(),
-    date: '19/01/19',
+    date: '2019-01-19',
     year: '2019',
     time: '',
     location: 'Villeneuve la Garennes, France',
@@ -72,7 +72,7 @@ export const shows = [
   },
   {
     id: uuid(),
-    date: '06/04/18',
+    date: '2018-04-06',
     year: '2018',
     time: '',
     location: 'Villeneuve la Garennes, France',
@@ -82,7 +82,7 @@ export const shows = [
   },
   {
     id: uuid(),
-    date: '13/01/18',
+    date: '2018-01-13',
     year: '2018',
     time: '',
     location: 'Meaux, France',
@@ -92,7 +92,7 @@ export const shows = [
   },
   {
     id: uuid(),
-    date: '05/08/17',
+    date: '2017-08-05',
     year: '2017',
     time: '',
     location: 'Ascot, UK',
@@ -102,7 +102,7 @@ export const shows = [
   },
   {
     id: uuid(),
-    date: '21/06/17',
+    date: '2017-06-21',
     year: '2017',
     time: '',
     location: 'Meaux, France',
@@ -112,7 +112,7 @@ export const shows = [
   },
   {
     id: uuid(),
-    date: '11/07/14',
+    date: '2014-07-11',
     year: '2014',
     time: '',
     location: 'Jussieu, France',
@@ -122,7 +122,7 @@ export const shows = [
   },
   {
     id: uuid(),
-    date: '21/06/14',
+    date: '2014-06-21',
     year: '2014',
     time: '',
     location: 'Meaux, France',
@@ -132,7 +132,7 @@ export const shows = [
   },
   {
     id: uuid(),
-    date: '21/06/14',
+    date: '2014-06-21',
     year: '2014',
     time: '',
     location: 'Meaux, France',
@@ -142,7 +142,7 @@ export const shows = [
   },
   {
     id: uuid(),
-    date: '09/06/14',
+    date: '2014-06-09',
     year: '2014',
     time: '',
     location: 'Cergy, France',
@@ -152,7 +152,7 @@ export const shows = [
   },
   {
     id: uuid(),
-    date: '04/06/14',
+    date: '2014-06-04',
     year: '2014',
     time: '',
     location: 'Paris, France',
@@ -162,7 +162,7 @@ export const shows = [
   },
   {
     id: uuid(),
-    date: '02/04/14',
+    date: '2024-04-02',
     year: '2014',
     time: '',
     location: 'Paris, France',
@@ -172,17 +172,7 @@ export const shows = [
   },
   {
     id: uuid(),
-    date: '02/04/14',
-    year: '2014',
-    time: '',
-    location: 'Paris, France',
-    venue: 'Le Buzz',
-    infoLink: '',
-    isInfo: false,
-  },
-  {
-    id: uuid(),
-    date: '22/06/13',
+    date: '2013-06-22',
     year: '2013',
     time: '',
     location: 'Ouarville, France',
@@ -192,7 +182,7 @@ export const shows = [
   },
   {
     id: uuid(),
-    date: '29/06/12',
+    date: '2012-06-29',
     year: '2012',
     time: '',
     location: 'Magny-le-Hongre, France',
@@ -202,7 +192,7 @@ export const shows = [
   },
   {
     id: uuid(),
-    date: '13/04/12',
+    date: '2012-04-13',
     year: '2012',
     time: '',
     location: 'Magny-le-Hongre, France',
@@ -212,7 +202,7 @@ export const shows = [
   },
   {
     id: uuid(),
-    date: '19/11/11',
+    date: '2011-11-19',
     year: '2011',
     time: '',
     location: 'Paris, France',
@@ -222,7 +212,7 @@ export const shows = [
   },
   {
     id: uuid(),
-    date: '25/06/11',
+    date: '2011-06-25',
     year: '2011',
     time: '',
     location: 'Ouarville, France',
@@ -232,7 +222,7 @@ export const shows = [
   },
   {
     id: uuid(),
-    date: '21/06/11',
+    date: '2011-06-21',
     year: '2011',
     time: '',
     location: 'Meaux, France',
@@ -242,7 +232,7 @@ export const shows = [
   },
   {
     id: uuid(),
-    date: '17/06/11',
+    date: '2011-06-17',
     year: '2011',
     time: '',
     location: 'Paris, France',
@@ -252,7 +242,7 @@ export const shows = [
   },
   {
     id: uuid(),
-    date: '09/03/11',
+    date: '2011-03-09',
     year: '2011',
     time: '',
     location: 'Paris, France',
@@ -262,7 +252,7 @@ export const shows = [
   },
   {
     id: uuid(),
-    date: '16/12/10',
+    date: '2010-12-16',
     year: '2010',
     time: '',
     location: 'Meaux, France',
@@ -272,7 +262,7 @@ export const shows = [
   },
   {
     id: uuid(),
-    date: '27/11/2010',
+    date: '2010-11-27',
     year: '2010',
     time: '',
     location: 'Meaux, France',
