@@ -6,11 +6,16 @@ import { motion } from "motion/react";
 import CurrentShowsItem from "./CurrentShowsItem";
 
 const Shows = () => {
+  const sortByDate = (a, b) => {
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
+    return dateA - dateB;
+  };
   const [year, setYear] = useState("");
   const currentDate = Date.now();
-  const currentShows = shows.filter(
-    (show) => Date.parse(show.date) > currentDate
-  );
+  const currentShows = shows
+    .filter((show) => Date.parse(show.date) > currentDate)
+    .sort(sortByDate);
 
   const pastShows = shows.filter(
     (show) => show.year == year && Date.parse(show.date) < currentDate
