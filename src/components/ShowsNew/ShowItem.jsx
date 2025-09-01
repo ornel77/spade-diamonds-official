@@ -1,7 +1,7 @@
 const ShowItem = ({show}) => {
-  const options = { year: "numeric", month: "long", day: "numeric" };
+  const options = { year: "numeric", month: "short", day: "2-digit" };
   const dateObj = new Date(show.date);
-  const formatedDate = dateObj.toLocaleDateString("en-US", options);
+  const formatedDate = dateObj.toLocaleDateString("en-UK", options);
   return (
     <article className="border-b py-5 grid grid-cols-1 gap-2 md:grid-cols-3 md:items-start">
       <div className="flex gap-4">

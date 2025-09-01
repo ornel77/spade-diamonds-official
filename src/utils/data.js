@@ -2,6 +2,26 @@ import { v4 as uuid } from "uuid";
 export const shows = [
   {
     id: uuid(),
+    date: "2025-10-13",
+    year: "2025",
+    time: "08:30 PM",
+    location: "Paris, France",
+    venue: "Stade de France",
+    infoLink: "https://www.stadefrance.com/fr",
+    isInfo: true,
+  },
+  {
+    id: uuid(),
+    date: "2025-09-02",
+    year: "2025",
+    time: "09:00 PM",
+    location: "London, UK",
+    venue: "Royal Albert Hall",
+    infoLink: "https://www.royalalberthall.com/tickets",
+    isInfo: true,
+  },
+  {
+    id: uuid(),
     date: "2024-07-13",
     year: "2024",
     time: "",
@@ -273,12 +293,8 @@ export const shows = [
 ];
 
 export const years = [...new Set(shows.map(show => show.year))];
-export const yearsInt = years.map(Number)
-// for (let show of shows) {
-//   if (!years.includes(show.year)) {
-//     years.push(show.year);
-//   }
-// }
+
+
 
 export const musics = [
   {

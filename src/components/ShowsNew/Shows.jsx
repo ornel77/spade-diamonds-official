@@ -1,24 +1,37 @@
 import { useState } from "react";
-import { shows, years, yearsInt } from "../../utils/data";
+import { shows, years } from "../../utils/data";
 import ShowItem from "./ShowItem";
 import "./Shows.scss";
-import {motion} from 'motion/react'
+import { motion } from "motion/react";
+import CurrentShowsItem from "./CurrentShowsItem";
 
 const Shows = () => {
   const [year, setYear] = useState("");
-  // faire un filtre pour les past date ne prendre que ceux selon l'année sélectionné
-  //  faire un filtre pour les dates des lives qui sont supérieur à la date actuel
-  // si cet array est vide alors on met le message no dates yet
-  // faire une fonction pour formatter la date
-  const pastShows = shows.filter((show) => show.year == year);
+  const currentDate = Date.now();
+  const currentShows = shows.filter(
+    (show) => Date.parse(show.date) > currentDate
+  );
+
+  const pastShows = shows.filter(
+    (show) => show.year == year && Date.parse(show.date) < currentDate
+  );
+
   return (
     <section className="container">
       <div className="show-container">
         <h2>Shows</h2>
-        <p className="italic text-center text-lg mb-9 text-pink-500">
-          No dates yet
-        </p>
-        <div>
+        {currentShows.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center justify-center items-center gap-9">
+            {currentShows.map((show) => (
+              <CurrentShowsItem key={show.id} show={show} />
+            ))}
+          </div>
+        ) : (
+          <p className="italic text-center text-lg mb-9 text-pink-500">
+            No dates yet
+          </p>
+        )}
+        <div className="mt-11">
           <p className="text-center mb-5 underline">Past shows:</p>
           <select
             name="show-year"
