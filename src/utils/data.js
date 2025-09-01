@@ -5,7 +5,7 @@ export const shows = [
     date: "2025-10-13",
     year: "2025",
     time: "08:30 PM",
-    location: "Paris, France",
+    location: "Saint-Denis, France",
     venue: "Stade de France",
     infoLink: "https://www.stadefrance.com/fr",
     isInfo: true,
