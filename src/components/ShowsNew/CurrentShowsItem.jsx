@@ -3,7 +3,6 @@
 const CurrentShowsItem = ({show}) => {
   const options = { year: "numeric", month: "short", day: "2-digit" };
   const dateObj = new Date(show.date);
-  console.log(dateObj.getFullYear())
   const formatedDate = dateObj.toLocaleDateString("en-UK", options);
   const [day, month, year] = formatedDate.split(" ")
   

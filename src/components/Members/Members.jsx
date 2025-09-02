@@ -17,7 +17,7 @@ function Members() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.2 }}
           >
-            <img src="/sd8.jpeg" alt="wendy" />
+            <img src="/sd8.webp" alt="wendy" />
             <p>
               <span className="name">Wendy</span>
               <span className="function"> - singer, guitarist</span>
@@ -30,7 +30,7 @@ function Members() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.4 }}
           >
-            <img src="/sd9.jpeg" alt="ed" />
+            <img src="/sd9.jpg" alt="ed" />
             <p>
               <span className="name">Edwin</span>
               <span className="function"> - drummer, back vocal</span>
@@ -42,7 +42,7 @@ function Members() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.6 }}
           >
-            <img src={ornel} alt="ornel" />
+            <img src="/sd10.webp" alt="ornel" />
             <p>
               <span className="name">Ornella</span>
               <span className="function"> - guitarist, pianist</span>
