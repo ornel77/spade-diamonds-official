@@ -65,7 +65,7 @@ function Navbar() {
         {/* Burger Icons */}
         <div className="container burger-menu" onClick={handleClick}>
           <a href="#home" className="flex gap-3 items-center">
-            <img src={logo} alt="" />
+            <img src={logo} alt="logo-sd" />
             <span>SPADE DIAMONDS</span>
           </a>
           {/* <div className='burger-icons'>

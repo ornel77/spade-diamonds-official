@@ -14,7 +14,7 @@ function About() {
               </p>
             </div>
             <div className="about-illustration">
-              <img src={illu} alt="" loading='lazy' />
+              <img src={illu} alt="illustration" loading='lazy' />
             </div>
         </div>
       </div>
