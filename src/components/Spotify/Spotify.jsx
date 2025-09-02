@@ -25,7 +25,7 @@ const Spotify = () => {
               className="bg-white rounded-md block w-44 px-2 hover:bg-opacity-80 transition-all duration-300"
               target="_blank"
             >
-              <img src="/apple.png" alt="" className="h-16 object-contain " />
+              <img src="/apple.webp" alt="" className="h-16 object-contain " />
             </a>
           </div>
         </div>

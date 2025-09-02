@@ -11,43 +11,43 @@ function Members() {
       <div className="members-container">
         <h2>Members</h2>
         <div className="grid-container">
-          <motion.div
+          <div
             className="sub-container"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.2 }}
+            // initial={{ opacity: 0, y: 40 }}
+            // animate={{ opacity: 1, y: 0 }}
+            // transition={{ duration: 0.3, delay: 0.2 }}
           >
             <img src="/sd8.webp" alt="wendy" />
             <p>
               <span className="name">Wendy</span>
               <span className="function"> - singer, guitarist</span>
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             className="sub-container"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.4 }}
+            // initial={{ opacity: 0, y: 40 }}
+            // animate={{ opacity: 1, y: 0 }}
+            // transition={{ duration: 0.3, delay: 0.4 }}
           >
             <img src="/sd9.jpg" alt="ed" />
             <p>
               <span className="name">Edwin</span>
               <span className="function"> - drummer, back vocal</span>
             </p>
-          </motion.div>
-          <motion.div
+          </div>
+          <div
             className="sub-container"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.6 }}
+            // initial={{ opacity: 0, y: 40 }}
+            // animate={{ opacity: 1, y: 0 }}
+            // transition={{ duration: 0.3, delay: 0.6 }}
           >
             <img src="/sd10.webp" alt="ornel" />
             <p>
               <span className="name">Ornella</span>
               <span className="function"> - guitarist, pianist</span>
             </p>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
