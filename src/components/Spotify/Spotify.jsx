@@ -8,7 +8,7 @@ const Spotify = () => {
           width="100%"
           height="380"
           // allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
+          // loading="lazy"
           title="spotify spade diamonds"
         ></iframe>
         <div>
@@ -26,7 +26,7 @@ const Spotify = () => {
               className="bg-white rounded-md block w-44 px-2 hover:bg-opacity-80 transition-all duration-300"
               target="_blank"
             >
-              <img src="/apple.webp" alt="" className="h-16 object-contain " fetchpriority="high" />
+              <img src="/apple.webp" alt="" className="h-16 object-contain " fetchPriority="high" />
             </a>
           </div>
         </div>

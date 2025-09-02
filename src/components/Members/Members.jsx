@@ -2,7 +2,6 @@ import ed from "../../assets/image/ed.png";
 import ornel from "../../assets/image/ornel.png";
 import wendy from "../../assets/image/wendy.png";
 import steph from "../../assets/image/steph.png";
-import { motion } from "motion/react";
 import "./Members.scss";
 
 function Members() {
@@ -13,11 +12,8 @@ function Members() {
         <div className="grid-container">
           <div
             className="sub-container"
-            // initial={{ opacity: 0, y: 40 }}
-            // animate={{ opacity: 1, y: 0 }}
-            // transition={{ duration: 0.3, delay: 0.2 }}
           >
-            <img src="/sd8.webp" alt="wendy" />
+            <img src="/sd8.webp" alt="wendy" loading="lazy" />
             <p>
               <span className="name">Wendy</span>
               <span className="function"> - singer, guitarist</span>
@@ -26,11 +22,8 @@ function Members() {
 
           <div
             className="sub-container"
-            // initial={{ opacity: 0, y: 40 }}
-            // animate={{ opacity: 1, y: 0 }}
-            // transition={{ duration: 0.3, delay: 0.4 }}
           >
-            <img src="/sd9.jpg" alt="ed" />
+            <img src="/sd9.jpg" alt="ed" loading="lazy" />
             <p>
               <span className="name">Edwin</span>
               <span className="function"> - drummer, back vocal</span>
@@ -38,11 +31,8 @@ function Members() {
           </div>
           <div
             className="sub-container"
-            // initial={{ opacity: 0, y: 40 }}
-            // animate={{ opacity: 1, y: 0 }}
-            // transition={{ duration: 0.3, delay: 0.6 }}
           >
-            <img src="/sd10.webp" alt="ornel" />
+            <img src="/sd10.webp" alt="ornel" loading="lazy" />
             <p>
               <span className="name">Ornella</span>
               <span className="function"> - guitarist, pianist</span>
