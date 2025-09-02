@@ -12,11 +12,8 @@ const Shows = () => {
     return dateA - dateB;
   };
 
-  const test = Date.parse("2025-09-02")
-  console.log(test)
   const [year, setYear] = useState("");
   const currentDate = Date.now();
-  console.log(currentDate)
   const currentShows = shows
     .filter((show) => Date.parse(show.date) >= currentDate)
     .sort(sortByDate);
