@@ -6,7 +6,7 @@ const ShowItem = ({show}) => {
     <article className="border-b py-5 grid grid-cols-1 gap-2 md:grid-cols-3 md:items-start">
       <div className="flex gap-4">
         <p>{formatedDate}</p>
-        <p>{show.time}</p>
+        {/* <p>{show.time}</p> */}
       </div>
       <p className="">{show.venue}</p>
       <p className="md:text-right">{show.location}</p>
