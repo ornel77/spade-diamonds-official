@@ -7,8 +7,9 @@ const Spotify = () => {
           src="https://open.spotify.com/embed/track/5eIduUEFeXYhFFqPKWcr1Y?utm_source=generator"
           width="100%"
           height="380"
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          // allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
+          title="spotify spade diamonds"
         ></iframe>
         <div>
           <p className="text-2xl text-center">And also on :</p>
@@ -25,7 +26,7 @@ const Spotify = () => {
               className="bg-white rounded-md block w-44 px-2 hover:bg-opacity-80 transition-all duration-300"
               target="_blank"
             >
-              <img src="/apple.webp" alt="" className="h-16 object-contain " />
+              <img src="/apple.webp" alt="" className="h-16 object-contain " fetchpriority="high" />
             </a>
           </div>
         </div>
