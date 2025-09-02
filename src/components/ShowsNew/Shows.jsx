@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { shows, years } from "../../utils/data";
+import { getYear, shows, years } from "../../utils/data";
 import ShowItem from "./ShowItem";
 import "./Shows.scss";
 import { motion } from "motion/react";
@@ -19,7 +19,7 @@ const Shows = () => {
     .sort(sortByDate);
 
   const pastShows = shows.filter(
-    (show) => show.year == year && Date.parse(show.date) < currentDate
+    (show) => getYear(show.date) == year && Date.parse(show.date) < currentDate
   );
 
   return (
