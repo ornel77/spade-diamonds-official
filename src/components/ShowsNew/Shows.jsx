@@ -30,7 +30,7 @@ const Shows = () => {
       <div className="show-container">
         <h2>Shows</h2>
         {currentShows.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-1 md:justify-items-center justify-center items-center gap-9">
+          <div className="grid [grid-template-columns:repeat(auto-fit,minmax(200px,1fr))]  justify-center gap-9">
             {currentShows.map((show) => (
               <CurrentShowsItem key={show.id} show={show} />
             ))}
@@ -48,11 +48,11 @@ const Shows = () => {
             className="bg-transparent w-full border-2 outline-none focus:ring-0 focus:border-gray-500"
             onChange={(e) => setYear(e.target.value)}
           >
-            <option value="-" className="italic">
+            <option value="-" className="italic text-black">
               Select a date
             </option>
             {years.map((year, index) => (
-              <option key={index} value={year}>
+              <option key={index} value={year} className="text-black">
                 {year}
               </option>
             ))}

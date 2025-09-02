@@ -2,7 +2,7 @@ import { v4 as uuid } from "uuid";
 export const shows = [
   {
     id: uuid(),
-    date: "2025-10-13",
+    date: "2025-10-13T20:30:00",
     year: "2025",
     time: "08:30 PM",
     location: "Saint-Denis, France",
@@ -12,7 +12,7 @@ export const shows = [
   },
   {
     id: uuid(),
-    date: "2025-09-02",
+    date: "2025-09-02T21:00:00",
     year: "2025",
     time: "09:00 PM",
     location: "London, UK",
