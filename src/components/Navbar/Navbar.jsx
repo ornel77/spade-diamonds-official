@@ -30,7 +30,7 @@ function Navbar() {
           </nav> */}
         <div className="band-name">
           <a href="#home" className="cursor-pointer">
-            <h2 className="text-xl cursor-pointer xl:text-2xl">SPADE DIAMONDS</h2>
+            <h2 className="text-xl cursor-pointer xl:text-2xl font-bold">SPADE DIAMONDS</h2>
           </a>
         </div>
         <ul className="socials">

@@ -292,7 +292,7 @@ export const shows = [
   },
 ];
 
-export const years = [...new Set(shows.map(show => show.year))];
+export const years = [...new Set(shows.map(show => show.year))].sort((a,b) => b - a)
 
 
 
