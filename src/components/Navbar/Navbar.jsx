@@ -8,6 +8,7 @@ import { HiMenuAlt3 } from "react-icons/hi";
 import { FaTimes } from "react-icons/fa";
 import "./Navbar.scss";
 import logo from "../../assets/image/logo_spade_white.png";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 
 function Navbar() {
   const [nav, setNav] = useState(false);
@@ -63,11 +64,7 @@ function Navbar() {
             </a>
           </li>
           <li>
-            <section className="flex gap-2">
-              <button>FR</button>
-              <p>|</p>
-              <button>EN</button>
-            </section>
+            <LanguageSwitcher />
           </li>
         </ul>
         
