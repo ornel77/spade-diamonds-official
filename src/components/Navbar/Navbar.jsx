@@ -14,6 +14,7 @@ function Navbar() {
   const handleClick = () => setNav(!nav);
   return (
     <div className="fixed-container shadow-lg">
+    
       <div className="nav-container container">
         {/* <nav className='nav-desktop'>
             <ul className='nav-list'>
@@ -61,7 +62,15 @@ function Navbar() {
               <RiSoundcloudLine />{" "}
             </a>
           </li>
+          <li>
+            <section className="flex gap-2">
+              <button>FR</button>
+              <p>|</p>
+              <button>EN</button>
+            </section>
+          </li>
         </ul>
+        
         {/* Burger Icons */}
         <div className="container burger-menu" onClick={handleClick}>
           <a href="#home" className="flex gap-3 items-center">
