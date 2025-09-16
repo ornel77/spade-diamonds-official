@@ -1,22 +1,21 @@
 {
-    "sections": {
-        "spotify": "Et aussi sur :",
-        "shows": {
-            "title": "Concert",
-            "date-details": "Détails",
-            "past-shows": "Concerts passés",
-            "select": "Selectionner une date"
-        },
-        "about": {
-            "title": "A propos de nous",
-            "content-p1": "Spade Diamonds, it's a family affair. A project started in 2008 with the initial sole purpose of playing “la fête de la musique” in Meaux, where they are based. This lead to numerous musical projects: The first musical contest win in 2009, the first EP in 2010, and a series of concerts throughout Paris and neighbouring cities, including venues such as le File7, l'espace Caravalle, le Gibus, le Truskel and Les Disquaires.",
-            "content-p2": "Spade Diamonds it's also a sound. British-rock based, French pop infused and classical musically coated, Spade Diamonds' sound evolves with freedom between several universe, and becomes whole on stage where it is delivered with passion and intensity."
-        },
-        "members": {
-            "title": "Membre du groupe",
-            "function-w":"chanteuse, guitariste",
-            "function-e": "batteur, back vocal",
-            "function-o": "guitariste, pianiste"
-        }
-    }
+  "spotify": "Et aussi sur :",
+  "shows": {
+    "title": "Concerts",
+    "date-details": "Détails",
+    "no-date": "Pas encore de date",
+    "past-shows": "Concerts passés",
+    "select": "Sélectionner une date"
+  },
+  "about": {
+    "title": "A propos de nous",
+    "content-p1": "Spade diamonds c’est une histoire de famille. Un projet entre frère et sœurs qui commence en 2008 sur un coup de tête et une promesse de concert pour la fête de la musique à Meaux, leur ville d’origine. S’en suit des projects musicaux en tout genre: le premier trophée d’un tremplin musical en 2009, le premier EP en 2010; et une série de concerts à travers l’île de France notamment au File 7, à l’espace Caravelle, au Gibus, au Truskel et au Disquaires.",
+    "content-p2": "Spade Diamonds c’est aussi un son. Nourrie par le rock anglais, la pop française incisive avec des teintes de musiques classiques, le son de Spade Diamonds évolue avec liberté entre plusieurs univers pour ne faire qu’un et culminer sur scène en délivrant toute son intensité."
+  },
+  "members": {
+    "title": "Membres du groupe",
+    "function-w": "chanteuse, guitariste",
+    "function-e": "batteur, back vocal",
+    "function-o": "guitariste, pianiste"
+  }
 }

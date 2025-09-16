@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import MusicScreen from './pages/MusicScreen'
 import VideoScreen from './pages/VideoScreen'
 import Footer from './components/Footer/Footer';
-
+import './i18n';
 
 function App() {
 

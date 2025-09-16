@@ -4,8 +4,10 @@ import ShowItem from "./ShowItem";
 import "./Shows.scss";
 import { motion } from "motion/react";
 import CurrentShowsItem from "./CurrentShowsItem";
+import { useTranslation } from "react-i18next";
 
 const Shows = () => {
+  const { t } = useTranslation();
   const sortByDate = (a, b) => {
     const dateA = new Date(a.date);
     const dateB = new Date(b.date);
@@ -25,7 +27,7 @@ const Shows = () => {
   return (
     <section className="container">
       <div className="show-container">
-        <h2>Shows</h2>
+        <h2>{t("shows.title")}</h2>
         {currentShows.length > 0 ? (
           <div className="grid [grid-template-columns:repeat(auto-fit,minmax(200px,1fr))]  justify-center gap-9">
             {currentShows.map((show) => (
@@ -34,11 +36,11 @@ const Shows = () => {
           </div>
         ) : (
           <p className="italic text-center text-lg mb-9 text-pink-500">
-            No dates yet
+            {t("shows.no-date")}
           </p>
         )}
         <div className="mt-11">
-          <p className="text-center mb-5 underline">Past shows:</p>
+          <p className="text-center mb-5 underline">{t("shows.past-shows")}:</p>
           <select
             name="show-year"
             id="show-year"
@@ -46,7 +48,7 @@ const Shows = () => {
             onChange={(e) => setYear(e.target.value)}
           >
             <option value="-" className="italic text-black">
-              Select a date
+              {t("shows.select")}
             </option>
             {years.map((year, index) => (
               <option key={index} value={year} className="text-black">

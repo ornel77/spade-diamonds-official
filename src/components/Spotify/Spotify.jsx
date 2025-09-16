@@ -1,7 +1,6 @@
-
 import { useTranslation } from "react-i18next";
 const Spotify = () => {
-  const {t} = useTranslation()
+  const { t } = useTranslation();
   return (
     <div className="md:flex justify-center items-center md:h-[80vh] 2xl:h-min 2xl:mb-20">
       <section className="container">
@@ -15,7 +14,7 @@ const Spotify = () => {
           title="spotify spade diamonds"
         ></iframe>
         <div>
-          <p className="text-2xl text-center">And also on :</p>
+          <p className="text-2xl text-center">{t("spotify")}</p>
           <div className="flex w-full  items-center justify-center my-6 gap-5">
             <a
               href="https://www.deezer.com/fr/artist/279882841"
@@ -29,7 +28,12 @@ const Spotify = () => {
               className="bg-white rounded-md block w-44 px-2 hover:bg-opacity-80 transition-all duration-300"
               target="_blank"
             >
-              <img src="/apple.webp" alt="" className="h-16 object-contain " fetchPriority="high" />
+              <img
+                src="/apple.webp"
+                alt=""
+                className="h-16 object-contain "
+                fetchPriority="high"
+              />
             </a>
           </div>
         </div>

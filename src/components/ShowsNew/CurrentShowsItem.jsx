@@ -1,11 +1,12 @@
+import { useTranslation } from "react-i18next";
 
-
-const CurrentShowsItem = ({show}) => {
+const CurrentShowsItem = ({ show }) => {
   const options = { year: "numeric", month: "short", day: "2-digit" };
   const dateObj = new Date(show.date);
   const formatedDate = dateObj.toLocaleDateString("en-UK", options);
-  const [day, month, year] = formatedDate.split(" ")
-  
+  const [day, month, year] = formatedDate.split(" ");
+  const { t } = useTranslation();
+
   return (
     <article className="flex gap-5">
       <section className="uppercase text-4xl font-extrabold">
@@ -20,10 +21,18 @@ const CurrentShowsItem = ({show}) => {
           <p className="italic text-sm"> {show.time} </p>
         </div>
         <div>
-          {show.isInfo && <a href={show.infoLink} target="_blank" className="underline cursor-pointer">Details</a>}
+          {show.isInfo && (
+            <a
+              href={show.infoLink}
+              target="_blank"
+              className="underline cursor-pointer"
+            >
+              {t("shows.date-details")}
+            </a>
+          )}
         </div>
       </section>
     </article>
-  )
-}
-export default CurrentShowsItem
+  );
+};
+export default CurrentShowsItem;
