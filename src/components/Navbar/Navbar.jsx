@@ -63,7 +63,7 @@ function Navbar() {
               <RiSoundcloudLine />{" "}
             </a>
           </li>
-          <li>
+          <li id="language">
             <LanguageSwitcher />
           </li>
         </ul>
