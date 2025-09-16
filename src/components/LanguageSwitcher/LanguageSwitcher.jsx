@@ -7,9 +7,11 @@ const LanguageSwitcher = () => {
   };
   return (
     <section className="flex gap-2">
-      <button onClick={() => changeLanguage("fr")}>FR</button>
+      <button onClick={() => changeLanguage("fr")} className={`px-2 p-0.5 rounded-md ${i18n.language == "fr" && "bg-white text-black"}`}>
+        FR
+      </button>
       <p>|</p>
-      <button onClick={() => changeLanguage("en")}>EN</button>
+      <button onClick={() => changeLanguage("en")} className={`px-2 p-0.5 rounded-md ${i18n.language == "en" && "bg-white text-black"}`}>EN</button>
     </section>
   );
 };
