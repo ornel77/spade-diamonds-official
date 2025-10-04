@@ -1,9 +1,9 @@
 {
-  "spotify": "Et aussi sur :",
+  "spotify": "Et aussi sur",
   "shows": {
     "title": "Concerts",
     "date-details": "Détails",
-    "no-date": "Pas encore de date",
+    "no-date": "A venir...",
     "past-shows": "Concerts passés",
     "select": "Sélectionner une date"
   },

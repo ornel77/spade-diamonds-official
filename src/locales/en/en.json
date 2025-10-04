@@ -1,9 +1,9 @@
 {
-  "spotify": "And also on :",
+  "spotify": "And also on",
   "shows": {
     "title": "Shows",
     "date-details": "Details",
-    "no-date": "No dates yet",
+    "no-date": "Watch this space...",
     "past-shows": "Past shows",
     "select": "Select a date"
   },

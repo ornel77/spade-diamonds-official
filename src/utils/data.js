@@ -2,24 +2,6 @@ import { v4 as uuid } from "uuid";
 export const shows = [
   {
     id: uuid(),
-    date: "2025-10-13T20:30:00",
-    time: "08:30 PM",
-    location: "Saint-Denis, France",
-    venue: "Stade de France",
-    infoLink: "https://www.stadefrance.com/fr",
-    isInfo: true,
-  },
-  {
-    id: uuid(),
-    date: "2025-09-02T21:00:00",
-    time: "09:00 PM",
-    location: "London, UK",
-    venue: "Royal Albert Hall",
-    infoLink: "https://www.royalalberthall.com/tickets",
-    isInfo: true,
-  },
-  {
-    id: uuid(),
     date: "2024-07-13",
     time: "",
     location: "Paris, France",

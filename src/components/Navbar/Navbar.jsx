@@ -77,6 +77,9 @@ function Navbar() {
           {/* <div className='burger-icons'>
               {!nav ? <HiMenuAlt3 size={30}/> : <FaTimes size={30}/>}
             </div> */}
+            <div>
+              <LanguageSwitcher />
+            </div>
         </div>
         {/* Mobile Menu */}
         {/* <nav className={nav ? 'nav-mobile active': 'nav-mobile'}>

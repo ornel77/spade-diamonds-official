@@ -7,9 +7,10 @@ const Spotify = () => {
         <iframe
           style={{ borderRadius: "12px" }}
           src="https://open.spotify.com/embed/track/5eIduUEFeXYhFFqPKWcr1Y?utm_source=generator"
+          // src="https://open.spotify.com/embed/track/3n3Ppam7vgaVa1iaRUc9Lp"
           width="100%"
           height="380"
-          // allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           // loading="lazy"
           title="spotify spade diamonds"
         ></iframe>
@@ -32,7 +33,6 @@ const Spotify = () => {
                 src="/apple.webp"
                 alt=""
                 className="h-16 object-contain "
-                fetchPriority="high"
               />
             </a>
           </div>
