@@ -14,13 +14,12 @@ function About() {
           </div>
           <div className="about-content">
             <p>
-              
-             {t("about.content-p1")}
-              <br /><br />
-                {t("about.content-p2")}
+              {t("about.content-p1")}
+              <br />
+              <br />
+              {t("about.content-p2")}
             </p>
           </div>
-          
         </div>
       </div>
     </section>
