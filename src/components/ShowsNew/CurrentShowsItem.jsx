@@ -1,14 +1,14 @@
 import { useTranslation } from "react-i18next";
 
 const CurrentShowsItem = ({ show }) => {
+  const { t, i18n } = useTranslation();
   const options = { year: "numeric", month: "short", day: "2-digit" };
   const dateObj = new Date(show.date);
-  const formatedDate = dateObj.toLocaleDateString("en-UK", options);
+  const formatedDate = i18n.language == "en" ? dateObj.toLocaleDateString("en-UK", options) : dateObj.toLocaleDateString("fr-FR", options)
   const [day, month, year] = formatedDate.split(" ");
-  const { t } = useTranslation();
 
   return (
-    <article className="flex gap-5">
+    <article className="flex gap-5 shadow-xl p-5 rounded-md">
       <section className="uppercase text-4xl font-extrabold">
         <p> {day} </p>
         <p> {month} </p>

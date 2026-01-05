@@ -27,7 +27,7 @@ const Shows = () => {
   return (
     <section className="container">
       <div className="show-container">
-        <h2>{t("shows.title")}</h2>
+        <h2 className="pb-7">{t("shows.title")}</h2>
         {currentShows.length > 0 ? (
           <div className="grid [grid-template-columns:repeat(auto-fit,minmax(200px,1fr))]  justify-center gap-9">
             {currentShows.map((show) => (

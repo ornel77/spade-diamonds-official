@@ -12,7 +12,7 @@ function About() {
           <div className="about-illustration">
             <img src={illu} alt="illustration" loading="lazy" />
           </div>
-          <div className="about-content">
+          <div className="about-content lg:tracking-wide">
             <p>
               {t("about.content-p1")}
               <br />
