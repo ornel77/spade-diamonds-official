@@ -14,11 +14,12 @@ const Shows = () => {
     return dateA - dateB;
   };
 
-  const [year, setYear] = useState("");
+  const [year, setYear] = useState(getYear(shows[0].date));
   const currentDate = Date.now();
   const currentShows = shows
     .filter((show) => Date.parse(show.date) >= currentDate)
     .sort(sortByDate);
+
 
   const pastShows = shows.filter(
     (show) => getYear(show.date) == year && Date.parse(show.date) < currentDate
@@ -47,16 +48,15 @@ const Shows = () => {
             className="bg-transparent w-full border-2 outline-none focus:ring-0 focus:border-gray-500"
             onChange={(e) => setYear(e.target.value)}
           >
-            <option value="-" className="italic text-black">
+            {/* <option value="-" className="italic text-black">
               {t("shows.select")}
-            </option>
+            </option> */}
             {years.map((year, index) => (
               <option key={index} value={year} className="text-black">
                 {year}
               </option>
             ))}
           </select>
-
           <motion.div
             key={year} // <--- force remount à chaque changement de year
             initial={{ opacity: 0 }}
