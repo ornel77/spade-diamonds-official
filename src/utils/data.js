@@ -2,6 +2,36 @@ import { v4 as uuid } from "uuid";
 export const shows = [
   {
     id: uuid(),
+    date: "2026-05-15",
+    time: "08:00 PM",
+    location: "Meaux, France",
+    venue: "Espace Caravelle",
+    infoLink: "",
+    isInfo: false,
+    illu: "/show1.png"
+  },
+  {
+    id: uuid(),
+    date: "2026-04-05",
+    time: "08:00 PM",
+    location: "London, UK",
+    venue: "Roundhouse",
+    infoLink: "",
+    isInfo: false,
+    illu: "/show2.png"
+  },
+  {
+    id: uuid(),
+    date: "2026-04-05",
+    time: "08:00 PM",
+    location: "London, UK",
+    venue: "Roundhouse",
+    infoLink: "",
+    isInfo: false,
+    illu: "/show2.png"
+  },
+  {
+    id: uuid(),
     date: "2024-07-13",
     time: "",
     location: "Paris, France",
