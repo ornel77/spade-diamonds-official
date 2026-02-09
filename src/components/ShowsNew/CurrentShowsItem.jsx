@@ -4,9 +4,12 @@ const CurrentShowsItem = ({ show }) => {
   const { t, i18n } = useTranslation();
   const options = { year: "numeric", month: "short", day: "2-digit" };
   const dateObj = new Date(show.date);
-  const formatedDate = i18n.language == "en" ? dateObj.toLocaleDateString("en-UK", options) : dateObj.toLocaleDateString("fr-FR", options)
+  const formatedDate =
+    i18n.language == "en"
+      ? dateObj.toLocaleDateString("en-UK", options)
+      : dateObj.toLocaleDateString("fr-FR", options);
   const [day, month, year] = formatedDate.split(" ");
-  console.log(show)
+  console.log(show);
 
   return (
     // <article className="flex gap-5 shadow-xl p-5 rounded-md">
@@ -34,17 +37,22 @@ const CurrentShowsItem = ({ show }) => {
     //     </div>
     //   </section>
     // </article>
-    <article className="w-">
+    // ui like a concert ticket
+    <article className="shadow-xl bg-black">
       <div>
         <img src={show.illu} alt="" className="" />
       </div>
-      <div>
-        <p><span>{show.date}</span><span>{show.time} </span></p>
+      <div className="p-5">
+        <p className="flex justify-between text-pink-500">
+          <span>
+            {day} {month} {year}{" "}
+          </span>
+          <span>{show.time} </span>
+        </p>
         <p>{show.venue} </p>
         <p>{show.location} </p>
-      </div>
-      <div className="bg-white p-4">
-        <img src="/code-barre.png" alt="" />
+
+        <img src="/code-barre.png" alt="" className="bg-white w-48 mx-auto block" />
       </div>
     </article>
   );
