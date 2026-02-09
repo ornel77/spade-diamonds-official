@@ -38,21 +38,29 @@ const CurrentShowsItem = ({ show }) => {
     //   </section>
     // </article>
     // ui like a concert ticket
-    <article className="shadow-xl bg-black">
+    <article className="shadow-xl bg-black relative">
       <div>
         <img src={show.illu} alt="" className="" />
       </div>
-      <div className="p-5">
+      <div className="p-5 space-y-4 text-sm">
         <p className="flex justify-between text-pink-500">
           <span>
             {day} {month} {year}{" "}
           </span>
           <span>{show.time} </span>
         </p>
-        <p>{show.venue} </p>
-        <p>{show.location} </p>
-
-        <img src="/code-barre.png" alt="" className="bg-white w-48 mx-auto block" />
+        <div className="text-sm">
+          <p className="leading-none">{show.location} </p>
+          <p className="">{show.venue} </p>
+        </div>
+        <div className="relative">
+          <div className="circles"></div>
+          <img
+            src="/code-barre.png"
+            alt=""
+            className="bg-white w-36 mx-auto block pt-8"
+          />
+        </div>
       </div>
     </article>
   );

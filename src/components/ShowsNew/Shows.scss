@@ -1,76 +1,99 @@
-@import '../../../variables';
+@import "../../../variables";
 
 .show-container {
-    // height: 50vh;
-    margin-bottom: 80px;
-    
-    h2 {
-        margin-bottom: 16px;
-        text-align: center;
-        color: $white;
-        font-size: 32px;
-    }
-    .table-wrap {
-        // overflow-x: scroll;
+  // height: 50vh;
+  margin-bottom: 80px;
 
-    }
-    
-    .show-list {
-        // background: rgba( 28, 28, 28, 0.25 );
-        // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-        // backdrop-filter: blur( 7.5px );
-        // -webkit-backdrop-filter: blur( 7.5px );
-        // border-radius: 10px;
-        // border: 1px solid rgba( 255, 255, 255, 0.18 );
+  h2 {
+    margin-bottom: 16px;
+    text-align: center;
+    color: $white;
+    font-size: 32px;
+  }
 
-        article {
-            display: grid;
-            grid-template-columns: 150px 150px repeat(3, 1fr);
-            margin-bottom: 8px;
-            border-bottom: 1px solid rgba(245, 245, 245, 0.378);
-            padding-bottom: 8px;
-            // place-items: center;
+  .show-list {
+    // background: rgba( 28, 28, 28, 0.25 );
+    // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    // backdrop-filter: blur( 7.5px );
+    // -webkit-backdrop-filter: blur( 7.5px );
+    // border-radius: 10px;
+    // border: 1px solid rgba( 255, 255, 255, 0.18 );
 
-            &:last-child {
-                border-bottom: none;
-            }
+    article {
+      display: grid;
+      grid-template-columns: 150px 150px repeat(3, 1fr);
+      margin-bottom: 8px;
+      border-bottom: 1px solid rgba(245, 245, 245, 0.378);
+      padding-bottom: 8px;
+      // place-items: center;
 
-            .date {
-                // height: 20px;
-                .day {
-                    font-size: 20px;
-                    color: $light-pink;
-                    font-weight: 900;
-                    font-family: $title-font;
+      &:last-child {
+        border-bottom: none;
+      }
 
-                }
-                .month-year {
-                    font-size: 14px;
-                }
-            }
-
-             .info-link {
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
-
-                .info-icon {
-                    color: $light-pink;
-                    font-size: 50px;
-                }
-            }
-
-            .city, .venue, .date, .time {
-                display: flex;
-                align-items: center;
-            }
+      .date {
+        // height: 20px;
+        .day {
+          font-size: 20px;
+          color: $light-pink;
+          font-weight: 900;
+          font-family: $title-font;
         }
+        .month-year {
+          font-size: 14px;
+        }
+      }
+
+      .info-link {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .info-icon {
+          color: $light-pink;
+          font-size: 50px;
+        }
+      }
+
+      .city,
+      .venue,
+      .date,
+      .time {
+        display: flex;
+        align-items: center;
+      }
     }
+  }
+}
+
+.circles {
+  position: absolute;
+  z-index: 120;
+  width: 20px;
+  height: 20px;
+  background-color: $background-color;
+  border-radius: 50%;
+  left: -30px;
+  top: 0px;
+   &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    right: 100px;
+    bottom: 0px;
+   }
 }
 
 @keyframes fade-in {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .animate-fade-in {
@@ -82,16 +105,17 @@
 /* -------------------------------------------------------------------------- */
 
 @media screen and (max-width: 420px) {
-   .show-container {
+  .show-container {
     .show-list {
-        padding: 16px;
-        article {
-            // background-color: #fff;
-            grid-template-columns: 100px repeat(2, 1fr);
-            .city, .time {
-                display: none;
-            }
-           }
+      padding: 16px;
+      article {
+        // background-color: #fff;
+        grid-template-columns: 100px repeat(2, 1fr);
+        .city,
+        .time {
+          display: none;
+        }
+      }
     }
-   }
+  }
 }
