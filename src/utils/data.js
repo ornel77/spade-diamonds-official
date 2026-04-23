@@ -2,6 +2,24 @@ import { v4 as uuid } from "uuid";
 export const shows = [
   {
     id: uuid(),
+    date: "2026-06-17",
+    time: "08:45 PM",
+    location: "London, UK",
+    venue: "The Dublin Castle",
+    infoLink: "https://thedublincastle.com/",
+    isInfo: true,
+  },
+  {
+    id: uuid(),
+    date: "2026-06-07",
+    time: "08:00 PM",
+    location: "London, UK",
+    venue: "Fiddler's Elbow",
+    infoLink: "https://www.thefiddlerselbow.co.uk/",
+    isInfo: true,
+  },
+  {
+    id: uuid(),
     date: "2024-07-13",
     time: "",
     location: "Paris, France",
@@ -375,7 +393,7 @@ export const getYear = (dateShow) => {
   return dateObj.getFullYear();
 };
 export const years = [...new Set(shows.map((show) => getYear(show.date)))].sort(
-  (a, b) => b - a
+  (a, b) => b - a,
 );
 
 export const musics = [
