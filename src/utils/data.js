@@ -1,12 +1,13 @@
 import { v4 as uuid } from "uuid";
 export const shows = [
+
   {
     id: uuid(),
     date: "2026-06-17",
-    time: "08:45 PM",
+    time: "09:30 PM",
     location: "London, UK",
     venue: "The Dublin Castle",
-    infoLink: "https://thedublincastle.com/",
+    infoLink: "https://bugbearbookings.com/dublin-castle/",
     isInfo: true,
   },
   {
@@ -15,8 +16,8 @@ export const shows = [
     time: "08:00 PM",
     location: "London, UK",
     venue: "Fiddler's Elbow",
-    infoLink: "https://www.thefiddlerselbow.co.uk/",
-    isInfo: true,
+    infoLink: "",
+    isInfo: false,
   },
   {
     id: uuid(),
@@ -387,14 +388,19 @@ export const shows = [
     isInfo: false,
   },
 ];
+const currentDate = Date.now();
 
 export const getYear = (dateShow) => {
   const dateObj = new Date(dateShow);
   return dateObj.getFullYear();
 };
-export const years = [...new Set(shows.map((show) => getYear(show.date)))].sort(
-  (a, b) => b - a,
-);
+export const years = [
+  ...new Set(
+    shows
+    .filter((show) => Date.parse(show.date) < currentDate)
+      .map((show) => getYear(show.date))
+  ),
+].sort((a, b) => b - a);
 
 export const musics = [
   {

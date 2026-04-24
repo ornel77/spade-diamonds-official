@@ -8,7 +8,7 @@ const CurrentShowsItem = ({ show }) => {
   const [day, month, year] = formatedDate.split(" ");
 
   return (
-    <article className="flex gap-5 shadow-xl p-5 rounded-md">
+    <article className="flex gap-5 shadow-xl p-5 rounded-md bg-black">
       <section className="uppercase text-4xl font-extrabold">
         <p> {day} </p>
         <p> {month} </p>
