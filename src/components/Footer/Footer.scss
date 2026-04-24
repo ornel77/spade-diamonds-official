@@ -3,8 +3,9 @@
 
 footer {
    
-    height: 10vh;
+    // height: 10vh;
     background-color: $purple;
+    // background: url("/background-purple3.jpg") no-repeat center/cover;
     .footer-container {
         height: 100%;
         display: flex;
@@ -12,10 +13,10 @@ footer {
         align-items: center;
         gap: 20px;
         .socials {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
+            // display: flex;
+            // justify-content: space-between;
+            // align-items: center;
+            // gap: 20px;
         }
     }
     
