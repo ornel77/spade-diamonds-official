@@ -3,12 +3,5 @@
 
 footer {
     background-color: $purple;
-    background: url("/background-purple3.jpg") no-repeat center;
-    .footer-container {
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 20px;
-    }   
+    background: url("/background-purple3.jpg") no-repeat center;  
 }
