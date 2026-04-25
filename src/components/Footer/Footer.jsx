@@ -1,21 +1,23 @@
-import React from "react";
+
 import { SiFacebook, SiInstagram } from "react-icons/si";
 import { IoLogoYoutube } from "react-icons/io";
 import { RiSoundcloudLine } from "react-icons/ri";
+import { useTranslation } from "react-i18next";
 
 import "./Footer.scss";
-import footerImg from "../../assets/image/sd4.jpeg";
 
 function Footer() {
+  const { t } = useTranslation();
+
   return (
-    <footer>
-      <div className="container footer-container">
-        <p className="copy text-sm">&copy; SPADE DIAMONDS</p>
-        <ul className="socials">
+    <footer className="py-6">
+      <div className="container flex flex-col justify-center h-full gap-6 ">
+        <h3 className="text-center text-2xl uppercase">{t("footer.title")}</h3>
+        <ul className="socials flex justify-center gap-8 border-b border-gray-400 pb-5">
           <li>
             <a href="https://www.instagram.com/spadediamonds/" target="_blank">
               {" "}
-              <SiInstagram />{" "}
+              <SiInstagram size={32} />{" "}
             </a>
           </li>
           <li>
@@ -24,22 +26,23 @@ function Footer() {
               target="_blank"
             >
               {" "}
-              <IoLogoYoutube />{" "}
+              <IoLogoYoutube size={32} />{" "}
             </a>
           </li>
           <li>
             <a href="https://www.facebook.com/spadediamonds" target="_blank">
               {" "}
-              <SiFacebook />{" "}
+              <SiFacebook size={32} />{" "}
             </a>
           </li>
           <li>
             <a href="https://soundcloud.com/spadediamonds" target="_blank">
               {" "}
-              <RiSoundcloudLine />{" "}
+              <RiSoundcloudLine size={32} />{" "}
             </a>
           </li>
         </ul>
+        <p className="copy text-sm text-center">&copy; 2026 SPADE DIAMONDS</p>
       </div>
     </footer>
   );
