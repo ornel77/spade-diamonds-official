@@ -2,14 +2,17 @@
 import { SiFacebook, SiInstagram } from "react-icons/si";
 import { IoLogoYoutube } from "react-icons/io";
 import { RiSoundcloudLine } from "react-icons/ri";
+import { useTranslation } from "react-i18next";
 
 import "./Footer.scss";
 
 function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="py-6">
       <div className="container flex flex-col justify-center h-full gap-6 ">
-        <h3 className="text-center text-2xl uppercase">follow us</h3>
+        <h3 className="text-center text-2xl uppercase">{t("footer.title")}</h3>
         <ul className="socials flex justify-center gap-8 border-b border-gray-400 pb-5">
           <li>
             <a href="https://www.instagram.com/spadediamonds/" target="_blank">

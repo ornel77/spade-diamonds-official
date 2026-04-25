@@ -17,5 +17,8 @@
     "function-w": "chanteuse, guitariste",
     "function-e": "batteur",
     "function-o": "guitariste, pianiste"
+  },
+  "footer": {
+    "title": "suivez-nous"
   }
 }

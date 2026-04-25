@@ -2,8 +2,6 @@
 
 
 footer {
-   
-    // height: 10vh;
     background-color: $purple;
     background: url("/background-purple3.jpg") no-repeat center;
     .footer-container {
@@ -12,12 +10,5 @@ footer {
         justify-content: space-between;
         align-items: center;
         gap: 20px;
-        .socials {
-            // display: flex;
-            // justify-content: space-between;
-            // align-items: center;
-            // gap: 20px;
-        }
-    }
-    
+    }   
 }
