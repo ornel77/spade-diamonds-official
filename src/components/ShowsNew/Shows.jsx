@@ -3,7 +3,7 @@ import { getYear, shows, years } from "../../utils/data";
 import ShowItem from "./ShowItem";
 import "./Shows.scss";
 import { motion } from "motion/react";
-import CurrentShowsItem from "./CurrentShowsItem";
+import CurrentShowsItem from "./UpcomingShowsItem";
 import { useTranslation } from "react-i18next";
 
 const Shows = () => {

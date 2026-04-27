@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-const CurrentShowsItem = ({ show }) => {
+const UpcomingShowsItem = ({ show }) => {
   const { t, i18n } = useTranslation();
   const options = { year: "numeric", month: "short", day: "2-digit" };
   const dateObj = new Date(show.date);
@@ -35,4 +35,4 @@ const CurrentShowsItem = ({ show }) => {
     </article>
   );
 };
-export default CurrentShowsItem;
+export default UpcomingShowsItem;
