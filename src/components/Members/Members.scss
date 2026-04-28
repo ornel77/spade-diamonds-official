@@ -17,13 +17,20 @@
         text-align: center;
 
         img {
-            border-radius: 15px;
+            border-radius: 8px;
             margin-bottom: 8px;
             height: 400px;
             object-fit: cover;
+            // border: 4px solid rgba(255, 255, 255, 0.748);
+            -webkit-mask-image: url("/mask.png");
+            mask-image: url("/mask.png");
+            mask-repeat: no-repeat;
+            mask-position: -130px -50px; 
+
         }
 
         .sub-container {
+            margin-bottom: 20px;
 
             // font-family: $title-font;
             .name {
@@ -48,6 +55,10 @@
         .grid-container {
             grid-template-columns: repeat(1, 1fr);
             margin-bottom: 64px;
+            .sub-container {
+                // max-width: 300px;
+                // width: 100%;
+            }
         }
     }
 }
