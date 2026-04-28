@@ -7,10 +7,9 @@ const ShowItem = ({show}) => {
   const formatedDate = i18n.language == "en" ? dateObj.toLocaleDateString("en-UK", options) : dateObj.toLocaleDateString("fr-FR", options)
   return (
     
-    <article className="border-b py-5 grid grid-cols-1 gap-2 md:grid-cols-3 md:items-start">
+    <article className="border-b last:border-b-0 border-black py-5 grid grid-cols-1 gap-2 md:grid-cols-3 md:items-start">
       <div className="flex gap-4">
         <p>{formatedDate}</p>
-        {/* <p>{show.time}</p> */}
       </div>
       <p className="">{show.venue}</p>
       <p className="md:text-right">{show.location}</p>
