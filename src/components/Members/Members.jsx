@@ -12,7 +12,7 @@ function Members() {
           <div
             className="sub-container"
           >
-            <img src="/sd8.webp" alt="wendy" loading="lazy" className="shadow-2xl"/>
+            <img src="/sd8.webp" alt="wendy" loading="lazy"/>
             <div>
               <p className="name">Wendy</p>
               <p className="function">{t("members.function-w")}</p>
