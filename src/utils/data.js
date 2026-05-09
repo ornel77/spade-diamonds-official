@@ -7,7 +7,7 @@ export const shows = [
     time: "09:30 PM",
     location: "London, UK",
     venue: "The Dublin Castle",
-    infoLink: "https://bugbearbookings.com/dublin-castle/",
+    infoLink: "https://wegottickets.com/f/18153",
     isInfo: true,
   },
   {
