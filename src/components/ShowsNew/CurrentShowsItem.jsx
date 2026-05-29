@@ -17,15 +17,15 @@ const CurrentShowsItem = ({ show }) => {
       <section className="flex flex-col gap-4">
         <div>
           <p className="font-bold text-xl">{show.location} </p>
-          <p className="italic text-blue-500"> {show.venue} </p>
-          <p className="italic text-sm"> {show.time} </p>
+          <p className="italic"> {show.venue} </p>
+          <p className=" text-sm"> {show.time} </p>
         </div>
         <div>
           {show.isInfo && (
             <a
               href={show.infoLink}
               target="_blank"
-              className="underline cursor-pointer"
+              className=" cursor-pointer uppercase  border-2 border-blue-500 text-blue-500 px-3 py-1.5 rounded-sm text-sm hover:bg-blue-500 hover:text-white transition-colors duration-300"
             >
               {t("shows.date-details")}
             </a>

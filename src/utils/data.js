@@ -16,8 +16,8 @@ export const shows = [
     time: "08:00 PM",
     location: "London, UK",
     venue: "Fiddler's Elbow",
-    infoLink: "",
-    isInfo: false,
+    infoLink: "https://www.tickettailor.com/events/thefiddlerselbow/2219392",
+    isInfo: true,
   },
   {
     id: uuid(),
