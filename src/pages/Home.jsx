@@ -10,8 +10,8 @@ function Home() {
     <div className="pt-24 scroll-smooth" id="home">
       {/* <Hero /> */}
       {/* <GodotGame /> */}
-      <Spotify />
       <Shows />
+      <Spotify />
       <About />
       <Members />
     </div>
