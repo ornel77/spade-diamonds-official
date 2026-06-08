@@ -42,7 +42,7 @@ const Shows = () => {
           </p>
         )}
         <div className="mt-11">
-          <p className="text-center mb-5 underline">{t("shows.past-shows")}:</p>
+          <h2 className="text-center mb-5">{t("shows.past-shows")}</h2>
           <select
             name="show-year"
             id="show-year"
