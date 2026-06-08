@@ -15,7 +15,7 @@ const CurrentShowsItem = ({ show }) => {
         <p> {year} </p>
       </section>
       <section className="flex flex-col gap-4">
-        <div>
+        <div className="space-y-0.5">
           <p className="font-bold text-xl">{show.location} </p>
           <p className="italic"> {show.venue} </p>
           <p className=" text-sm"> {show.time} </p>

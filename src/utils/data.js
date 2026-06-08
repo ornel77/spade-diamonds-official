@@ -1,6 +1,14 @@
 import { v4 as uuid } from "uuid";
 export const shows = [
-
+{
+    id: uuid(),
+    date: "2026-09-14",
+    time: "09:30 PM",
+    location: "London, UK",
+    venue: "The Half Moon Putney",
+    infoLink: "",
+    isInfo: false,
+  },
   {
     id: uuid(),
     date: "2026-06-17",
