@@ -22,7 +22,7 @@ const Shows = () => {
   
 
   const pastShows = shows.filter(
-  show => Date.parse(show.date) < currentDate && getYear(show.date) === Number(year)
+  show => Date.parse(show.date) < (currentDate - 86400000)  && getYear(show.date) == Number(year)
 );
 
 

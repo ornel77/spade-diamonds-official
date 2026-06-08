@@ -10,7 +10,7 @@ function About() {
         <h2>{t("about.title")}</h2>
         <div className="about-sub-container">
           <div className="about-illustration">
-            <img src={illu} alt="illustration" loading="lazy" />
+            <img src={"/trio.JPG"} alt="illustration" loading="lazy" />
           </div>
           <div className="about-content lg:tracking-wide">
             <p>
