@@ -1,4 +1,4 @@
-import illu from "../../assets/image/sd7.jpeg";
+
 import "./About.scss";
 import { useTranslation } from "react-i18next";
 function About() {
