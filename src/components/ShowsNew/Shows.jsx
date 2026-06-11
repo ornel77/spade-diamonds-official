@@ -17,14 +17,14 @@ const Shows = () => {
   const [year, setYear] = useState(years[0]);
   const currentDate = Date.now();
   const currentShows = shows
-    .filter((show) => Date.parse(show.date) >= (currentDate - 86400000))
+    .filter((show) => Date.parse(show.date) >= currentDate - 86400000)
     .sort(sortByDate);
-  
 
   const pastShows = shows.filter(
-  show => Date.parse(show.date) < (currentDate - 86400000)  && getYear(show.date) == Number(year)
-);
-
+    (show) =>
+      Date.parse(show.date) < currentDate - 86400000 &&
+      getYear(show.date) == Number(year),
+  );
 
   return (
     <section className="container">
