@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 function Members() {
   const {t} = useTranslation()
   return (
-    <section className="container">
+    <section className="container" id="members">
       <div className="members-container">
         <h2>{t("members.title")}</h2>
         <div className="grid-container">

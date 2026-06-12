@@ -5,7 +5,7 @@ function About() {
   const { t } = useTranslation();
 
   return (
-    <section className="container">
+    <section className="container" id="about">
       <div className="about-container">
         <h2>{t("about.title")}</h2>
         <div className="about-sub-container">

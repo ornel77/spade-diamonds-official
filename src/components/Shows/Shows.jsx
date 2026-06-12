@@ -5,7 +5,7 @@ import { Table } from "flowbite-react";
 
 const Shows = () => {
   return (
-    <section className="container">
+    <section className="container" id="shows">
       <div className="show-container">
         <h2>Live Tour</h2>
         <div className="table-wrap overflow-x-scroll md:overflow-x-hidden">

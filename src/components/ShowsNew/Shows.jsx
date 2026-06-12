@@ -27,7 +27,7 @@ const Shows = () => {
 
 
   return (
-    <section className="container">
+    <section className="container" id="shows">
       <div className="show-container">
         <h2 className="pb-7 mt-8">{t("shows.title")}</h2>
         {currentShows.length > 0 ? (

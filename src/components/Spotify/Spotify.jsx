@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 const Spotify = () => {
   const { t } = useTranslation();
   return (
-    <div className="md:flex justify-center items-center md:h-[80vh] 2xl:h-min 2xl:mb-20">
+    <div className="md:flex justify-center items-center md:h-[80vh] 2xl:h-min 2xl:mb-20" id="spotify">
       <section className="container">
         <iframe
           style={{ borderRadius: "12px" }}
