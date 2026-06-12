@@ -1,8 +1,14 @@
 import "./Members.scss";
 import { useTranslation } from "react-i18next";
 import { motion } from "motion/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function Members() {
+  gsap.registerPlugin(ScrollTrigger);
+
+
+
   const { t } = useTranslation();
   return (
     <section className="container">
